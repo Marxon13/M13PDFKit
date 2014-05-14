@@ -47,7 +47,6 @@
 }
 
 static void *PDFKPageContentViewContext = &PDFKPageContentViewContext;
-static void *PDFKPageContentBoundsContext = &PDFKPageContentBoundsContext;
 
 static inline CGFloat ZoomScaleThatFits(CGSize target, CGSize source)
 {
@@ -243,6 +242,16 @@ static inline CGFloat ZoomScaleThatFits(CGSize target, CGSize source)
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
 	return theContainerView;
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    NSLog(@"-------- BEGIN PAN -----------");
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    NSLog(@"-------- END PAN -----------");
 }
 
 #pragma mark UIResponder instance methods

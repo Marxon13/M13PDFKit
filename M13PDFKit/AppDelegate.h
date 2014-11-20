@@ -2,8 +2,8 @@
 //  AppDelegate.h
 //  M13PDFKit
 //
-//  Created by Brandon McQuilkin on 5/3/14.
-//  Copyright (c) 2014 Brandon McQuilkin. All rights reserved.
+//  Created by Brandon McQuilkin on 11/19/14.
+//  Copyright (c) 2014 BrandonMcQuilkin. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+
 @end
+

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0610"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CA288A6E191561680032B0C8"
+               BlueprintIdentifier = "CAF256311A1CFF0000F0EA4F"
                BuildableName = "M13PDFKit.app"
                BlueprintName = "M13PDFKit"
+               ReferencedContainer = "container:M13PDFKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CAF2564A1A1CFF0100F0EA4F"
+               BuildableName = "M13PDFKitTests.xctest"
+               BlueprintName = "M13PDFKitTests"
                ReferencedContainer = "container:M13PDFKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CA288A92191561680032B0C8"
+               BlueprintIdentifier = "CAF2564A1A1CFF0100F0EA4F"
                BuildableName = "M13PDFKitTests.xctest"
                BlueprintName = "M13PDFKitTests"
                ReferencedContainer = "container:M13PDFKit.xcodeproj">
@@ -42,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CA288A6E191561680032B0C8"
+            BlueprintIdentifier = "CAF256311A1CFF0000F0EA4F"
             BuildableName = "M13PDFKit.app"
             BlueprintName = "M13PDFKit"
             ReferencedContainer = "container:M13PDFKit.xcodeproj">
@@ -61,7 +75,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CA288A6E191561680032B0C8"
+            BlueprintIdentifier = "CAF256311A1CFF0000F0EA4F"
             BuildableName = "M13PDFKit.app"
             BlueprintName = "M13PDFKit"
             ReferencedContainer = "container:M13PDFKit.xcodeproj">
@@ -79,7 +93,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CA288A6E191561680032B0C8"
+            BlueprintIdentifier = "CAF256311A1CFF0000F0EA4F"
             BuildableName = "M13PDFKit.app"
             BlueprintName = "M13PDFKit"
             ReferencedContainer = "container:M13PDFKit.xcodeproj">

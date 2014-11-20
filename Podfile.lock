@@ -1,0 +1,10 @@
+PODS:
+  - TTOpenInAppActivity (1.0)
+
+DEPENDENCIES:
+  - TTOpenInAppActivity
+
+SPEC CHECKSUMS:
+  TTOpenInAppActivity: 9e1e206dd9b65127ae08e30333e6182d6587a102
+
+COCOAPODS: 0.34.4

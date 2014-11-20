@@ -24,6 +24,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 /**
  A object that represents a single PDF File.

@@ -1,1531 +1,608 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>11A6D3166B9E4DF1A7340B13</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>88CCBC2FFD064D688D11FAD6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>186C7FBB404D4DA5AD113882</key>
-		<dict>
-			<key>fileRef</key>
-			<string>88CCBC2FFD064D688D11FAD6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2658C97C0E8D0B402709DD46</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3BC96A8F8D1C3AA80967EB3F</string>
-				<string>9B73E826AFCCB1D55EC99EF8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3BC96A8F8D1C3AA80967EB3F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods/Pods.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>58A13940171A4031853F107A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>6FFAF8A890E84503A3E6080A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>88CCBC2FFD064D688D11FAD6</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>9B73E826AFCCB1D55EC99EF8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods/Pods.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256291A1CFF0000F0EA4F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CAF256341A1CFF0000F0EA4F</string>
-				<string>CAF2564E1A1CFF0100F0EA4F</string>
-				<string>CAF256331A1CFF0000F0EA4F</string>
-				<string>11A6D3166B9E4DF1A7340B13</string>
-				<string>2658C97C0E8D0B402709DD46</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF2562A1A1CFF0000F0EA4F</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0610</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>BrandonMcQuilkin</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>CAF256311A1CFF0000F0EA4F</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.1</string>
-					</dict>
-					<key>CAF2564A1A1CFF0100F0EA4F</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.1</string>
-						<key>TestTargetID</key>
-						<string>CAF256311A1CFF0000F0EA4F</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>CAF2562D1A1CFF0000F0EA4F</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>CAF256291A1CFF0000F0EA4F</string>
-			<key>productRefGroup</key>
-			<string>CAF256331A1CFF0000F0EA4F</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>CAF256311A1CFF0000F0EA4F</string>
-				<string>CAF2564A1A1CFF0100F0EA4F</string>
-			</array>
-		</dict>
-		<key>CAF2562D1A1CFF0000F0EA4F</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>CAF256531A1CFF0100F0EA4F</string>
-				<string>CAF256541A1CFF0100F0EA4F</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>CAF2562E1A1CFF0000F0EA4F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CAF2567E1A1CFF2C00F0EA4F</string>
-				<string>CAF256811A1CFF2C00F0EA4F</string>
-				<string>CAF256841A1CFF2C00F0EA4F</string>
-				<string>CAF2567F1A1CFF2C00F0EA4F</string>
-				<string>CAF256891A1CFF2C00F0EA4F</string>
-				<string>CAF2563B1A1CFF0000F0EA4F</string>
-				<string>CAF256871A1CFF2C00F0EA4F</string>
-				<string>CAF256861A1CFF2C00F0EA4F</string>
-				<string>CAF256821A1CFF2C00F0EA4F</string>
-				<string>CAF256831A1CFF2C00F0EA4F</string>
-				<string>CAF2568C1A1CFF2C00F0EA4F</string>
-				<string>CAF2568B1A1CFF2C00F0EA4F</string>
-				<string>CAF2568A1A1CFF2C00F0EA4F</string>
-				<string>CAF256851A1CFF2C00F0EA4F</string>
-				<string>CAF256801A1CFF2C00F0EA4F</string>
-				<string>CAF256881A1CFF2C00F0EA4F</string>
-				<string>CAF256381A1CFF0000F0EA4F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CAF2562F1A1CFF0000F0EA4F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>186C7FBB404D4DA5AD113882</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CAF256301A1CFF0000F0EA4F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CAF256411A1CFF0000F0EA4F</string>
-				<string>CAF256461A1CFF0100F0EA4F</string>
-				<string>CAF256431A1CFF0100F0EA4F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CAF256311A1CFF0000F0EA4F</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>CAF256551A1CFF0100F0EA4F</string>
-			<key>buildPhases</key>
-			<array>
-				<string>6FFAF8A890E84503A3E6080A</string>
-				<string>CAF2562E1A1CFF0000F0EA4F</string>
-				<string>CAF2562F1A1CFF0000F0EA4F</string>
-				<string>CAF256301A1CFF0000F0EA4F</string>
-				<string>58A13940171A4031853F107A</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>M13PDFKit</string>
-			<key>productName</key>
-			<string>M13PDFKit</string>
-			<key>productReference</key>
-			<string>CAF256321A1CFF0000F0EA4F</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>CAF256321A1CFF0000F0EA4F</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>M13PDFKit.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>CAF256331A1CFF0000F0EA4F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CAF256321A1CFF0000F0EA4F</string>
-				<string>CAF2564B1A1CFF0100F0EA4F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256341A1CFF0000F0EA4F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CAF2565B1A1CFF2C00F0EA4F</string>
-				<string>CAF256391A1CFF0000F0EA4F</string>
-				<string>CAF2563A1A1CFF0000F0EA4F</string>
-				<string>CAF2563F1A1CFF0000F0EA4F</string>
-				<string>CAF256421A1CFF0100F0EA4F</string>
-				<string>CAF256441A1CFF0100F0EA4F</string>
-				<string>CAF256351A1CFF0000F0EA4F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>M13PDFKit</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256351A1CFF0000F0EA4F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CAF256361A1CFF0000F0EA4F</string>
-				<string>CAF256371A1CFF0000F0EA4F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256361A1CFF0000F0EA4F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256371A1CFF0000F0EA4F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256381A1CFF0000F0EA4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CAF256371A1CFF0000F0EA4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAF256391A1CFF0000F0EA4F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF2563A1A1CFF0000F0EA4F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF2563B1A1CFF0000F0EA4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CAF2563A1A1CFF0000F0EA4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAF2563F1A1CFF0000F0EA4F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CAF256401A1CFF0000F0EA4F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256401A1CFF0000F0EA4F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256411A1CFF0000F0EA4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CAF2563F1A1CFF0000F0EA4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAF256421A1CFF0100F0EA4F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256431A1CFF0100F0EA4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CAF256421A1CFF0100F0EA4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAF256441A1CFF0100F0EA4F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CAF256451A1CFF0100F0EA4F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256451A1CFF0100F0EA4F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256461A1CFF0100F0EA4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CAF256441A1CFF0100F0EA4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAF256471A1CFF0100F0EA4F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CAF256521A1CFF0100F0EA4F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CAF256481A1CFF0100F0EA4F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CAF256491A1CFF0100F0EA4F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CAF2564A1A1CFF0100F0EA4F</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>CAF256581A1CFF0100F0EA4F</string>
-			<key>buildPhases</key>
-			<array>
-				<string>CAF256471A1CFF0100F0EA4F</string>
-				<string>CAF256481A1CFF0100F0EA4F</string>
-				<string>CAF256491A1CFF0100F0EA4F</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>CAF2564D1A1CFF0100F0EA4F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>M13PDFKitTests</string>
-			<key>productName</key>
-			<string>M13PDFKitTests</string>
-			<key>productReference</key>
-			<string>CAF2564B1A1CFF0100F0EA4F</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>CAF2564B1A1CFF0100F0EA4F</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>M13PDFKitTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>CAF2564C1A1CFF0100F0EA4F</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>CAF2562A1A1CFF0000F0EA4F</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>CAF256311A1CFF0000F0EA4F</string>
-			<key>remoteInfo</key>
-			<string>M13PDFKit</string>
-		</dict>
-		<key>CAF2564D1A1CFF0100F0EA4F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>CAF256311A1CFF0000F0EA4F</string>
-			<key>targetProxy</key>
-			<string>CAF2564C1A1CFF0100F0EA4F</string>
-		</dict>
-		<key>CAF2564E1A1CFF0100F0EA4F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CAF256511A1CFF0100F0EA4F</string>
-				<string>CAF2564F1A1CFF0100F0EA4F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>M13PDFKitTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF2564F1A1CFF0100F0EA4F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CAF256501A1CFF0100F0EA4F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256501A1CFF0100F0EA4F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256511A1CFF0100F0EA4F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>M13PDFKitTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256521A1CFF0100F0EA4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CAF256511A1CFF0100F0EA4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAF256531A1CFF0100F0EA4F</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>CAF256541A1CFF0100F0EA4F</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>CAF256551A1CFF0100F0EA4F</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>CAF256561A1CFF0100F0EA4F</string>
-				<string>CAF256571A1CFF0100F0EA4F</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>CAF256561A1CFF0100F0EA4F</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>3BC96A8F8D1C3AA80967EB3F</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>M13PDFKit/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>CAF256571A1CFF0100F0EA4F</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>9B73E826AFCCB1D55EC99EF8</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>M13PDFKit/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>CAF256581A1CFF0100F0EA4F</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>CAF256591A1CFF0100F0EA4F</string>
-				<string>CAF2565A1A1CFF0100F0EA4F</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>CAF256591A1CFF0100F0EA4F</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>M13PDFKitTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/M13PDFKit.app/M13PDFKit</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>CAF2565A1A1CFF0100F0EA4F</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>M13PDFKitTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/M13PDFKit.app/M13PDFKit</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>CAF2565B1A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CAF2565C1A1CFF2C00F0EA4F</string>
-				<string>CAF2565D1A1CFF2C00F0EA4F</string>
-				<string>CAF256621A1CFF2C00F0EA4F</string>
-				<string>CAF2566F1A1CFF2C00F0EA4F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Classes</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>CAF2565C1A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>children</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Cache</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF2565D1A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CAF2565E1A1CFF2C00F0EA4F</string>
-				<string>CAF2565F1A1CFF2C00F0EA4F</string>
-				<string>CAF256601A1CFF2C00F0EA4F</string>
-				<string>CAF256611A1CFF2C00F0EA4F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Document</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF2565E1A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>CGPDFDocument.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF2565F1A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>CGPDFDocument.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256601A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>PDFKDocument.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256611A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>PDFKDocument.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256621A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CAF256631A1CFF2C00F0EA4F</string>
-				<string>CAF256641A1CFF2C00F0EA4F</string>
-				<string>CAF256651A1CFF2C00F0EA4F</string>
-				<string>CAF256661A1CFF2C00F0EA4F</string>
-				<string>CAF256671A1CFF2C00F0EA4F</string>
-				<string>CAF256681A1CFF2C00F0EA4F</string>
-				<string>CAF256691A1CFF2C00F0EA4F</string>
-				<string>CAF2566A1A1CFF2C00F0EA4F</string>
-				<string>CAF2566B1A1CFF2C00F0EA4F</string>
-				<string>CAF2566C1A1CFF2C00F0EA4F</string>
-				<string>CAF2566D1A1CFF2C00F0EA4F</string>
-				<string>CAF2566E1A1CFF2C00F0EA4F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Thumbs</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256631A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>PDFKThumbCache.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256641A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>PDFKThumbCache.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256651A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>PDFKThumbFetcher.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256661A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>PDFKThumbFetcher.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256671A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>PDFKThumbQueue.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256681A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>PDFKThumbQueue.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256691A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>PDFKThumbRenderer.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF2566A1A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>PDFKThumbRenderer.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF2566B1A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>PDFKThumbRequest.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF2566C1A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>PDFKThumbRequest.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF2566D1A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>PDFKThumbView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF2566E1A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>PDFKThumbView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF2566F1A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CAF256701A1CFF2C00F0EA4F</string>
-				<string>CAF256711A1CFF2C00F0EA4F</string>
-				<string>CAF256721A1CFF2C00F0EA4F</string>
-				<string>CAF256731A1CFF2C00F0EA4F</string>
-				<string>CAF256741A1CFF2C00F0EA4F</string>
-				<string>CAF256751A1CFF2C00F0EA4F</string>
-				<string>CAF256761A1CFF2C00F0EA4F</string>
-				<string>CAF256771A1CFF2C00F0EA4F</string>
-				<string>CAF256781A1CFF2C00F0EA4F</string>
-				<string>CAF256791A1CFF2C00F0EA4F</string>
-				<string>CAF2567A1A1CFF2C00F0EA4F</string>
-				<string>CAF2567B1A1CFF2C00F0EA4F</string>
-				<string>CAF2567C1A1CFF2C00F0EA4F</string>
-				<string>CAF2567D1A1CFF2C00F0EA4F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>View</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256701A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>PDFKBasicPDFViewer.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256711A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>PDFKBasicPDFViewer.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256721A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>PDFKBasicPDFViewerSinglePageCollectionView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256731A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>PDFKBasicPDFViewerSinglePageCollectionView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256741A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>PDFKBasicPDFViewerThumbsCollectionView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256751A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>PDFKBasicPDFViewerThumbsCollectionView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256761A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>PDFKPageContent.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256771A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>PDFKPageContent.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256781A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>PDFKPageContentLayer.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF256791A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>PDFKPageContentLayer.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF2567A1A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>PDFKPageContentView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF2567B1A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>PDFKPageContentView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF2567C1A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>PDFKPageScrubber.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF2567D1A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>PDFKPageScrubber.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF2567E1A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CAF2565F1A1CFF2C00F0EA4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAF2567F1A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CAF256611A1CFF2C00F0EA4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAF256801A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CAF256641A1CFF2C00F0EA4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAF256811A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CAF256661A1CFF2C00F0EA4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAF256821A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CAF256681A1CFF2C00F0EA4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAF256831A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CAF2566A1A1CFF2C00F0EA4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAF256841A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CAF2566C1A1CFF2C00F0EA4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAF256851A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CAF2566E1A1CFF2C00F0EA4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAF256861A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CAF256711A1CFF2C00F0EA4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAF256871A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CAF256731A1CFF2C00F0EA4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAF256881A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CAF256751A1CFF2C00F0EA4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAF256891A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CAF256771A1CFF2C00F0EA4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAF2568A1A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CAF256791A1CFF2C00F0EA4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAF2568B1A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CAF2567B1A1CFF2C00F0EA4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CAF2568C1A1CFF2C00F0EA4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CAF2567D1A1CFF2C00F0EA4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>CAF2562A1A1CFF0000F0EA4F</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		186C7FBB404D4DA5AD113882 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88CCBC2FFD064D688D11FAD6 /* libPods.a */; };
+		CAF256381A1CFF0000F0EA4F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF256371A1CFF0000F0EA4F /* main.m */; };
+		CAF2563B1A1CFF0000F0EA4F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF2563A1A1CFF0000F0EA4F /* AppDelegate.m */; };
+		CAF256411A1CFF0000F0EA4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF2563F1A1CFF0000F0EA4F /* Main.storyboard */; };
+		CAF256431A1CFF0100F0EA4F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAF256421A1CFF0100F0EA4F /* Images.xcassets */; };
+		CAF256461A1CFF0100F0EA4F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAF256441A1CFF0100F0EA4F /* LaunchScreen.xib */; };
+		CAF256521A1CFF0100F0EA4F /* M13PDFKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF256511A1CFF0100F0EA4F /* M13PDFKitTests.m */; };
+		CAF2567E1A1CFF2C00F0EA4F /* CGPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF2565F1A1CFF2C00F0EA4F /* CGPDFDocument.m */; };
+		CAF2567F1A1CFF2C00F0EA4F /* PDFKDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF256611A1CFF2C00F0EA4F /* PDFKDocument.m */; };
+		CAF256801A1CFF2C00F0EA4F /* PDFKThumbCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF256641A1CFF2C00F0EA4F /* PDFKThumbCache.m */; };
+		CAF256811A1CFF2C00F0EA4F /* PDFKThumbFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF256661A1CFF2C00F0EA4F /* PDFKThumbFetcher.m */; };
+		CAF256821A1CFF2C00F0EA4F /* PDFKThumbQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF256681A1CFF2C00F0EA4F /* PDFKThumbQueue.m */; };
+		CAF256831A1CFF2C00F0EA4F /* PDFKThumbRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF2566A1A1CFF2C00F0EA4F /* PDFKThumbRenderer.m */; };
+		CAF256841A1CFF2C00F0EA4F /* PDFKThumbRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF2566C1A1CFF2C00F0EA4F /* PDFKThumbRequest.m */; };
+		CAF256851A1CFF2C00F0EA4F /* PDFKThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF2566E1A1CFF2C00F0EA4F /* PDFKThumbView.m */; };
+		CAF256861A1CFF2C00F0EA4F /* PDFKBasicPDFViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF256711A1CFF2C00F0EA4F /* PDFKBasicPDFViewer.m */; };
+		CAF256871A1CFF2C00F0EA4F /* PDFKBasicPDFViewerSinglePageCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF256731A1CFF2C00F0EA4F /* PDFKBasicPDFViewerSinglePageCollectionView.m */; };
+		CAF256881A1CFF2C00F0EA4F /* PDFKBasicPDFViewerThumbsCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF256751A1CFF2C00F0EA4F /* PDFKBasicPDFViewerThumbsCollectionView.m */; };
+		CAF256891A1CFF2C00F0EA4F /* PDFKPageContent.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF256771A1CFF2C00F0EA4F /* PDFKPageContent.m */; };
+		CAF2568A1A1CFF2C00F0EA4F /* PDFKPageContentLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF256791A1CFF2C00F0EA4F /* PDFKPageContentLayer.m */; };
+		CAF2568B1A1CFF2C00F0EA4F /* PDFKPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF2567B1A1CFF2C00F0EA4F /* PDFKPageContentView.m */; };
+		CAF2568C1A1CFF2C00F0EA4F /* PDFKPageScrubber.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF2567D1A1CFF2C00F0EA4F /* PDFKPageScrubber.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CAF2564C1A1CFF0100F0EA4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAF2562A1A1CFF0000F0EA4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAF256311A1CFF0000F0EA4F;
+			remoteInfo = M13PDFKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3BC96A8F8D1C3AA80967EB3F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		88CCBC2FFD064D688D11FAD6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B73E826AFCCB1D55EC99EF8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CAF256321A1CFF0000F0EA4F /* M13PDFKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M13PDFKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAF256361A1CFF0000F0EA4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAF256371A1CFF0000F0EA4F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CAF256391A1CFF0000F0EA4F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CAF2563A1A1CFF0000F0EA4F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CAF256401A1CFF0000F0EA4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CAF256421A1CFF0100F0EA4F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CAF256451A1CFF0100F0EA4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CAF2564B1A1CFF0100F0EA4F /* M13PDFKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = M13PDFKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAF256501A1CFF0100F0EA4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAF256511A1CFF0100F0EA4F /* M13PDFKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M13PDFKitTests.m; sourceTree = "<group>"; };
+		CAF2565E1A1CFF2C00F0EA4F /* CGPDFDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPDFDocument.h; sourceTree = "<group>"; };
+		CAF2565F1A1CFF2C00F0EA4F /* CGPDFDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPDFDocument.m; sourceTree = "<group>"; };
+		CAF256601A1CFF2C00F0EA4F /* PDFKDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFKDocument.h; sourceTree = "<group>"; };
+		CAF256611A1CFF2C00F0EA4F /* PDFKDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFKDocument.m; sourceTree = "<group>"; };
+		CAF256631A1CFF2C00F0EA4F /* PDFKThumbCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFKThumbCache.h; sourceTree = "<group>"; };
+		CAF256641A1CFF2C00F0EA4F /* PDFKThumbCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFKThumbCache.m; sourceTree = "<group>"; };
+		CAF256651A1CFF2C00F0EA4F /* PDFKThumbFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFKThumbFetcher.h; sourceTree = "<group>"; };
+		CAF256661A1CFF2C00F0EA4F /* PDFKThumbFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFKThumbFetcher.m; sourceTree = "<group>"; };
+		CAF256671A1CFF2C00F0EA4F /* PDFKThumbQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFKThumbQueue.h; sourceTree = "<group>"; };
+		CAF256681A1CFF2C00F0EA4F /* PDFKThumbQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFKThumbQueue.m; sourceTree = "<group>"; };
+		CAF256691A1CFF2C00F0EA4F /* PDFKThumbRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFKThumbRenderer.h; sourceTree = "<group>"; };
+		CAF2566A1A1CFF2C00F0EA4F /* PDFKThumbRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFKThumbRenderer.m; sourceTree = "<group>"; };
+		CAF2566B1A1CFF2C00F0EA4F /* PDFKThumbRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFKThumbRequest.h; sourceTree = "<group>"; };
+		CAF2566C1A1CFF2C00F0EA4F /* PDFKThumbRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFKThumbRequest.m; sourceTree = "<group>"; };
+		CAF2566D1A1CFF2C00F0EA4F /* PDFKThumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFKThumbView.h; sourceTree = "<group>"; };
+		CAF2566E1A1CFF2C00F0EA4F /* PDFKThumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFKThumbView.m; sourceTree = "<group>"; };
+		CAF256701A1CFF2C00F0EA4F /* PDFKBasicPDFViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFKBasicPDFViewer.h; sourceTree = "<group>"; };
+		CAF256711A1CFF2C00F0EA4F /* PDFKBasicPDFViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFKBasicPDFViewer.m; sourceTree = "<group>"; };
+		CAF256721A1CFF2C00F0EA4F /* PDFKBasicPDFViewerSinglePageCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFKBasicPDFViewerSinglePageCollectionView.h; sourceTree = "<group>"; };
+		CAF256731A1CFF2C00F0EA4F /* PDFKBasicPDFViewerSinglePageCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFKBasicPDFViewerSinglePageCollectionView.m; sourceTree = "<group>"; };
+		CAF256741A1CFF2C00F0EA4F /* PDFKBasicPDFViewerThumbsCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFKBasicPDFViewerThumbsCollectionView.h; sourceTree = "<group>"; };
+		CAF256751A1CFF2C00F0EA4F /* PDFKBasicPDFViewerThumbsCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFKBasicPDFViewerThumbsCollectionView.m; sourceTree = "<group>"; };
+		CAF256761A1CFF2C00F0EA4F /* PDFKPageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFKPageContent.h; sourceTree = "<group>"; };
+		CAF256771A1CFF2C00F0EA4F /* PDFKPageContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFKPageContent.m; sourceTree = "<group>"; };
+		CAF256781A1CFF2C00F0EA4F /* PDFKPageContentLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFKPageContentLayer.h; sourceTree = "<group>"; };
+		CAF256791A1CFF2C00F0EA4F /* PDFKPageContentLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFKPageContentLayer.m; sourceTree = "<group>"; };
+		CAF2567A1A1CFF2C00F0EA4F /* PDFKPageContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFKPageContentView.h; sourceTree = "<group>"; };
+		CAF2567B1A1CFF2C00F0EA4F /* PDFKPageContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFKPageContentView.m; sourceTree = "<group>"; };
+		CAF2567C1A1CFF2C00F0EA4F /* PDFKPageScrubber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFKPageScrubber.h; sourceTree = "<group>"; };
+		CAF2567D1A1CFF2C00F0EA4F /* PDFKPageScrubber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFKPageScrubber.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CAF2562F1A1CFF0000F0EA4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				186C7FBB404D4DA5AD113882 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAF256481A1CFF0100F0EA4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11A6D3166B9E4DF1A7340B13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88CCBC2FFD064D688D11FAD6 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2658C97C0E8D0B402709DD46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3BC96A8F8D1C3AA80967EB3F /* Pods.debug.xcconfig */,
+				9B73E826AFCCB1D55EC99EF8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CAF256291A1CFF0000F0EA4F = {
+			isa = PBXGroup;
+			children = (
+				CAF256341A1CFF0000F0EA4F /* M13PDFKit */,
+				CAF2564E1A1CFF0100F0EA4F /* M13PDFKitTests */,
+				CAF256331A1CFF0000F0EA4F /* Products */,
+				11A6D3166B9E4DF1A7340B13 /* Frameworks */,
+				2658C97C0E8D0B402709DD46 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		CAF256331A1CFF0000F0EA4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CAF256321A1CFF0000F0EA4F /* M13PDFKit.app */,
+				CAF2564B1A1CFF0100F0EA4F /* M13PDFKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAF256341A1CFF0000F0EA4F /* M13PDFKit */ = {
+			isa = PBXGroup;
+			children = (
+				CAF2565B1A1CFF2C00F0EA4F /* Classes */,
+				CAF256391A1CFF0000F0EA4F /* AppDelegate.h */,
+				CAF2563A1A1CFF0000F0EA4F /* AppDelegate.m */,
+				CAF2563F1A1CFF0000F0EA4F /* Main.storyboard */,
+				CAF256421A1CFF0100F0EA4F /* Images.xcassets */,
+				CAF256441A1CFF0100F0EA4F /* LaunchScreen.xib */,
+				CAF256351A1CFF0000F0EA4F /* Supporting Files */,
+			);
+			path = M13PDFKit;
+			sourceTree = "<group>";
+		};
+		CAF256351A1CFF0000F0EA4F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CAF256361A1CFF0000F0EA4F /* Info.plist */,
+				CAF256371A1CFF0000F0EA4F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CAF2564E1A1CFF0100F0EA4F /* M13PDFKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				CAF256511A1CFF0100F0EA4F /* M13PDFKitTests.m */,
+				CAF2564F1A1CFF0100F0EA4F /* Supporting Files */,
+			);
+			path = M13PDFKitTests;
+			sourceTree = "<group>";
+		};
+		CAF2564F1A1CFF0100F0EA4F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CAF256501A1CFF0100F0EA4F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CAF2565B1A1CFF2C00F0EA4F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CAF2565D1A1CFF2C00F0EA4F /* Document */,
+				CAF256621A1CFF2C00F0EA4F /* Thumbs */,
+				CAF2566F1A1CFF2C00F0EA4F /* View */,
+			);
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		CAF2565D1A1CFF2C00F0EA4F /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				CAF2565E1A1CFF2C00F0EA4F /* CGPDFDocument.h */,
+				CAF2565F1A1CFF2C00F0EA4F /* CGPDFDocument.m */,
+				CAF256601A1CFF2C00F0EA4F /* PDFKDocument.h */,
+				CAF256611A1CFF2C00F0EA4F /* PDFKDocument.m */,
+			);
+			path = Document;
+			sourceTree = "<group>";
+		};
+		CAF256621A1CFF2C00F0EA4F /* Thumbs */ = {
+			isa = PBXGroup;
+			children = (
+				CAF256631A1CFF2C00F0EA4F /* PDFKThumbCache.h */,
+				CAF256641A1CFF2C00F0EA4F /* PDFKThumbCache.m */,
+				CAF256651A1CFF2C00F0EA4F /* PDFKThumbFetcher.h */,
+				CAF256661A1CFF2C00F0EA4F /* PDFKThumbFetcher.m */,
+				CAF256671A1CFF2C00F0EA4F /* PDFKThumbQueue.h */,
+				CAF256681A1CFF2C00F0EA4F /* PDFKThumbQueue.m */,
+				CAF256691A1CFF2C00F0EA4F /* PDFKThumbRenderer.h */,
+				CAF2566A1A1CFF2C00F0EA4F /* PDFKThumbRenderer.m */,
+				CAF2566B1A1CFF2C00F0EA4F /* PDFKThumbRequest.h */,
+				CAF2566C1A1CFF2C00F0EA4F /* PDFKThumbRequest.m */,
+				CAF2566D1A1CFF2C00F0EA4F /* PDFKThumbView.h */,
+				CAF2566E1A1CFF2C00F0EA4F /* PDFKThumbView.m */,
+			);
+			path = Thumbs;
+			sourceTree = "<group>";
+		};
+		CAF2566F1A1CFF2C00F0EA4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CAF256701A1CFF2C00F0EA4F /* PDFKBasicPDFViewer.h */,
+				CAF256711A1CFF2C00F0EA4F /* PDFKBasicPDFViewer.m */,
+				CAF256721A1CFF2C00F0EA4F /* PDFKBasicPDFViewerSinglePageCollectionView.h */,
+				CAF256731A1CFF2C00F0EA4F /* PDFKBasicPDFViewerSinglePageCollectionView.m */,
+				CAF256741A1CFF2C00F0EA4F /* PDFKBasicPDFViewerThumbsCollectionView.h */,
+				CAF256751A1CFF2C00F0EA4F /* PDFKBasicPDFViewerThumbsCollectionView.m */,
+				CAF256761A1CFF2C00F0EA4F /* PDFKPageContent.h */,
+				CAF256771A1CFF2C00F0EA4F /* PDFKPageContent.m */,
+				CAF256781A1CFF2C00F0EA4F /* PDFKPageContentLayer.h */,
+				CAF256791A1CFF2C00F0EA4F /* PDFKPageContentLayer.m */,
+				CAF2567A1A1CFF2C00F0EA4F /* PDFKPageContentView.h */,
+				CAF2567B1A1CFF2C00F0EA4F /* PDFKPageContentView.m */,
+				CAF2567C1A1CFF2C00F0EA4F /* PDFKPageScrubber.h */,
+				CAF2567D1A1CFF2C00F0EA4F /* PDFKPageScrubber.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CAF256311A1CFF0000F0EA4F /* M13PDFKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAF256551A1CFF0100F0EA4F /* Build configuration list for PBXNativeTarget "M13PDFKit" */;
+			buildPhases = (
+				6FFAF8A890E84503A3E6080A /* Check Pods Manifest.lock */,
+				CAF2562E1A1CFF0000F0EA4F /* Sources */,
+				CAF2562F1A1CFF0000F0EA4F /* Frameworks */,
+				CAF256301A1CFF0000F0EA4F /* Resources */,
+				58A13940171A4031853F107A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = M13PDFKit;
+			productName = M13PDFKit;
+			productReference = CAF256321A1CFF0000F0EA4F /* M13PDFKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CAF2564A1A1CFF0100F0EA4F /* M13PDFKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAF256581A1CFF0100F0EA4F /* Build configuration list for PBXNativeTarget "M13PDFKitTests" */;
+			buildPhases = (
+				CAF256471A1CFF0100F0EA4F /* Sources */,
+				CAF256481A1CFF0100F0EA4F /* Frameworks */,
+				CAF256491A1CFF0100F0EA4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAF2564D1A1CFF0100F0EA4F /* PBXTargetDependency */,
+			);
+			name = M13PDFKitTests;
+			productName = M13PDFKitTests;
+			productReference = CAF2564B1A1CFF0100F0EA4F /* M13PDFKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CAF2562A1A1CFF0000F0EA4F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = BrandonMcQuilkin;
+				TargetAttributes = {
+					CAF256311A1CFF0000F0EA4F = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					CAF2564A1A1CFF0100F0EA4F = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = CAF256311A1CFF0000F0EA4F;
+					};
+				};
+			};
+			buildConfigurationList = CAF2562D1A1CFF0000F0EA4F /* Build configuration list for PBXProject "M13PDFKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CAF256291A1CFF0000F0EA4F;
+			productRefGroup = CAF256331A1CFF0000F0EA4F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CAF256311A1CFF0000F0EA4F /* M13PDFKit */,
+				CAF2564A1A1CFF0100F0EA4F /* M13PDFKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CAF256301A1CFF0000F0EA4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAF256411A1CFF0000F0EA4F /* Main.storyboard in Resources */,
+				CAF256461A1CFF0100F0EA4F /* LaunchScreen.xib in Resources */,
+				CAF256431A1CFF0100F0EA4F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAF256491A1CFF0100F0EA4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58A13940171A4031853F107A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FFAF8A890E84503A3E6080A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CAF2562E1A1CFF0000F0EA4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAF2567E1A1CFF2C00F0EA4F /* CGPDFDocument.m in Sources */,
+				CAF256811A1CFF2C00F0EA4F /* PDFKThumbFetcher.m in Sources */,
+				CAF256841A1CFF2C00F0EA4F /* PDFKThumbRequest.m in Sources */,
+				CAF2567F1A1CFF2C00F0EA4F /* PDFKDocument.m in Sources */,
+				CAF256891A1CFF2C00F0EA4F /* PDFKPageContent.m in Sources */,
+				CAF2563B1A1CFF0000F0EA4F /* AppDelegate.m in Sources */,
+				CAF256871A1CFF2C00F0EA4F /* PDFKBasicPDFViewerSinglePageCollectionView.m in Sources */,
+				CAF256861A1CFF2C00F0EA4F /* PDFKBasicPDFViewer.m in Sources */,
+				CAF256821A1CFF2C00F0EA4F /* PDFKThumbQueue.m in Sources */,
+				CAF256831A1CFF2C00F0EA4F /* PDFKThumbRenderer.m in Sources */,
+				CAF2568C1A1CFF2C00F0EA4F /* PDFKPageScrubber.m in Sources */,
+				CAF2568B1A1CFF2C00F0EA4F /* PDFKPageContentView.m in Sources */,
+				CAF2568A1A1CFF2C00F0EA4F /* PDFKPageContentLayer.m in Sources */,
+				CAF256851A1CFF2C00F0EA4F /* PDFKThumbView.m in Sources */,
+				CAF256801A1CFF2C00F0EA4F /* PDFKThumbCache.m in Sources */,
+				CAF256881A1CFF2C00F0EA4F /* PDFKBasicPDFViewerThumbsCollectionView.m in Sources */,
+				CAF256381A1CFF0000F0EA4F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAF256471A1CFF0100F0EA4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAF256521A1CFF0100F0EA4F /* M13PDFKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CAF2564D1A1CFF0100F0EA4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAF256311A1CFF0000F0EA4F /* M13PDFKit */;
+			targetProxy = CAF2564C1A1CFF0100F0EA4F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CAF2563F1A1CFF0000F0EA4F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAF256401A1CFF0000F0EA4F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CAF256441A1CFF0100F0EA4F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAF256451A1CFF0100F0EA4F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CAF256531A1CFF0100F0EA4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CAF256541A1CFF0100F0EA4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CAF256561A1CFF0100F0EA4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BC96A8F8D1C3AA80967EB3F /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = M13PDFKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CAF256571A1CFF0100F0EA4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B73E826AFCCB1D55EC99EF8 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = M13PDFKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CAF256591A1CFF0100F0EA4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = M13PDFKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/M13PDFKit.app/M13PDFKit";
+			};
+			name = Debug;
+		};
+		CAF2565A1A1CFF0100F0EA4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = M13PDFKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/M13PDFKit.app/M13PDFKit";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CAF2562D1A1CFF0000F0EA4F /* Build configuration list for PBXProject "M13PDFKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAF256531A1CFF0100F0EA4F /* Debug */,
+				CAF256541A1CFF0100F0EA4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAF256551A1CFF0100F0EA4F /* Build configuration list for PBXNativeTarget "M13PDFKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAF256561A1CFF0100F0EA4F /* Debug */,
+				CAF256571A1CFF0100F0EA4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAF256581A1CFF0100F0EA4F /* Build configuration list for PBXNativeTarget "M13PDFKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAF256591A1CFF0100F0EA4F /* Debug */,
+				CAF2565A1A1CFF0100F0EA4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CAF2562A1A1CFF0000F0EA4F /* Project object */;
+}

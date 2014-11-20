@@ -12,7 +12,6 @@
 		CAF2563B1A1CFF0000F0EA4F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF2563A1A1CFF0000F0EA4F /* AppDelegate.m */; };
 		CAF256411A1CFF0000F0EA4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF2563F1A1CFF0000F0EA4F /* Main.storyboard */; };
 		CAF256431A1CFF0100F0EA4F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAF256421A1CFF0100F0EA4F /* Images.xcassets */; };
-		CAF256461A1CFF0100F0EA4F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAF256441A1CFF0100F0EA4F /* LaunchScreen.xib */; };
 		CAF256521A1CFF0100F0EA4F /* M13PDFKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF256511A1CFF0100F0EA4F /* M13PDFKitTests.m */; };
 		CAF2567E1A1CFF2C00F0EA4F /* CGPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF2565F1A1CFF2C00F0EA4F /* CGPDFDocument.m */; };
 		CAF2567F1A1CFF2C00F0EA4F /* PDFKDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF256611A1CFF2C00F0EA4F /* PDFKDocument.m */; };
@@ -52,7 +51,6 @@
 		CAF2563A1A1CFF0000F0EA4F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CAF256401A1CFF0000F0EA4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAF256421A1CFF0100F0EA4F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CAF256451A1CFF0100F0EA4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CAF2564B1A1CFF0100F0EA4F /* M13PDFKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = M13PDFKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF256501A1CFF0100F0EA4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAF256511A1CFF0100F0EA4F /* M13PDFKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M13PDFKitTests.m; sourceTree = "<group>"; };
@@ -152,7 +150,6 @@
 				CAF2563A1A1CFF0000F0EA4F /* AppDelegate.m */,
 				CAF2563F1A1CFF0000F0EA4F /* Main.storyboard */,
 				CAF256421A1CFF0100F0EA4F /* Images.xcassets */,
-				CAF256441A1CFF0100F0EA4F /* LaunchScreen.xib */,
 				CAF256351A1CFF0000F0EA4F /* Supporting Files */,
 			);
 			path = M13PDFKit;
@@ -328,7 +325,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAF256411A1CFF0000F0EA4F /* Main.storyboard in Resources */,
-				CAF256461A1CFF0100F0EA4F /* LaunchScreen.xib in Resources */,
 				CAF256431A1CFF0100F0EA4F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,14 +423,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		CAF256441A1CFF0100F0EA4F /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CAF256451A1CFF0100F0EA4F /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -521,6 +509,7 @@
 			baseConfigurationReference = 3BC96A8F8D1C3AA80967EB3F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = M13PDFKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -532,6 +521,7 @@
 			baseConfigurationReference = 9B73E826AFCCB1D55EC99EF8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = M13PDFKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

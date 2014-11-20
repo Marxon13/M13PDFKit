@@ -81,7 +81,7 @@
         // Existing thumb image not found - so create and queue up a thumb render operation on the work queue
 		PDFKThumbRenderer *thumbRender = [[PDFKThumbRenderer alloc] initWithRequest:request];
 		[thumbRender setQueuePriority:self.queuePriority];
-        [thumbRender setThreadPriority:(self.threadPriority - 0.1)];
+        [thumbRender setQualityOfService:NSQualityOfServiceUserInteractive];
 		if (self.isCancelled == NO) {
             // We're not cancelled - so update things and add the render operation to the work queue
             

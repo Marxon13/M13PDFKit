@@ -152,7 +152,7 @@
             //Set the priority
             [thumbFetch setQueuePriority:(priority ? NSOperationQueuePriorityNormal : NSOperationQueuePriorityLow)];
             request.thumbView.operation = thumbFetch;
-            [thumbFetch setThreadPriority:(priority ? 0.55 : 0.35)];
+            thumbFetch.qualityOfService = NSQualityOfServiceUtility;
             //Add it to the queue
 			[[PDFKThumbQueue sharedQueue] addFetchOperation:thumbFetch];
 		}

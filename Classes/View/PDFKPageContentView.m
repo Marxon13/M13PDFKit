@@ -94,6 +94,10 @@ static inline CGFloat ZoomScaleThatFits(CGSize target, CGSize source)
 			theContainerView.autoresizingMask = UIViewAutoresizingNone;
 			theContainerView.backgroundColor = [UIColor whiteColor];
             
+            //Remove autoresizing constraints.
+            theContentView.translatesAutoresizingMaskIntoConstraints = NO;
+            theThumbView.translatesAutoresizingMaskIntoConstraints = NO;
+            
             //Content size same as view size
 			self.contentSize = theContentView.bounds.size;
             
@@ -244,16 +248,6 @@ static inline CGFloat ZoomScaleThatFits(CGSize target, CGSize source)
 	return theContainerView;
 }
 
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
-{
-    NSLog(@"-------- BEGIN PAN -----------");
-}
-
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
-{
-    NSLog(@"-------- END PAN -----------");
-}
-
 #pragma mark UIResponder instance methods
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -284,7 +278,7 @@ static inline CGFloat ZoomScaleThatFits(CGSize target, CGSize source)
     //No idea why...
     //EXPLAIN!!! EXPLAIN!!! EXPLAIN!!! Explain yourself doctor...
 #warning EXPLAIN!!!
-    if (bounds.size.width != 0 && bounds.size.height == 0) {
+    if (bounds.size.width != 0 && bounds.size.height != 0) {
         [super setBounds: bounds];
     }
 }

@@ -25,7 +25,6 @@
 
 #import <UIKit/UIKit.h>
 #import "PDFKThumbView.h"
-#import "DebugScrollView.h"
 
 @class PDFKPageContentView;
 @class PDFKPageContent;
@@ -49,7 +48,7 @@
 /**
  The container view for the PDFKPageContent (view) that allows zooming in on the page.
  */
-@interface PDFKPageContentView : DebugScrollView
+@interface PDFKPageContentView : UIScrollView
 
 /**
  The PDFKPageContentView's delegate that will receive touch event information.

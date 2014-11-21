@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		186C7FBB404D4DA5AD113882 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88CCBC2FFD064D688D11FAD6 /* libPods.a */; };
-		CA784D9F1A1F982F003F953B /* Physics and Chemistry of Color.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CA784D9E1A1F982F003F953B /* Physics and Chemistry of Color.pdf */; };
 		CA784DA21A1F99A6003F953B /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA784DA11A1F99A6003F953B /* ImageIO.framework */; };
 		CA86CE8C1A1EAF45009CDD7C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA86CE8B1A1EAF45009CDD7C /* CoreGraphics.framework */; };
 		CA86CE901A1EAF56009CDD7C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA86CE8F1A1EAF56009CDD7C /* MessageUI.framework */; };
 		CA86CE931A1EB311009CDD7C /* SamplesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA86CE921A1EB311009CDD7C /* SamplesTableViewController.m */; };
 		CA86CE971A1EB561009CDD7C /* Wikipedia.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CA86CE961A1EB561009CDD7C /* Wikipedia.pdf */; };
-		CA86CE9A1A1EB56C009CDD7C /* DebugScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA86CE991A1EB56C009CDD7C /* DebugScrollView.m */; };
 		CAF256381A1CFF0000F0EA4F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF256371A1CFF0000F0EA4F /* main.m */; };
 		CAF2563B1A1CFF0000F0EA4F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF2563A1A1CFF0000F0EA4F /* AppDelegate.m */; };
 		CAF256411A1CFF0000F0EA4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF2563F1A1CFF0000F0EA4F /* Main.storyboard */; };
@@ -51,15 +49,12 @@
 		3BC96A8F8D1C3AA80967EB3F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		88CCBC2FFD064D688D11FAD6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B73E826AFCCB1D55EC99EF8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		CA784D9E1A1F982F003F953B /* Physics and Chemistry of Color.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Physics and Chemistry of Color.pdf"; path = "../../../../../Physics Textbooks/Physics and Chemistry of Color.pdf"; sourceTree = "<group>"; };
 		CA784DA11A1F99A6003F953B /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		CA86CE8B1A1EAF45009CDD7C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CA86CE8F1A1EAF56009CDD7C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		CA86CE911A1EB311009CDD7C /* SamplesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamplesTableViewController.h; sourceTree = "<group>"; };
 		CA86CE921A1EB311009CDD7C /* SamplesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SamplesTableViewController.m; sourceTree = "<group>"; };
 		CA86CE961A1EB561009CDD7C /* Wikipedia.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Wikipedia.pdf; sourceTree = "<group>"; };
-		CA86CE981A1EB56C009CDD7C /* DebugScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugScrollView.h; sourceTree = "<group>"; };
-		CA86CE991A1EB56C009CDD7C /* DebugScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugScrollView.m; sourceTree = "<group>"; };
 		CAF256321A1CFF0000F0EA4F /* M13PDFKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M13PDFKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF256361A1CFF0000F0EA4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAF256371A1CFF0000F0EA4F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -167,14 +162,11 @@
 		CAF256341A1CFF0000F0EA4F /* M13PDFKit */ = {
 			isa = PBXGroup;
 			children = (
-				CA86CE981A1EB56C009CDD7C /* DebugScrollView.h */,
-				CA86CE991A1EB56C009CDD7C /* DebugScrollView.m */,
 				CAF2565B1A1CFF2C00F0EA4F /* Classes */,
 				CAF256391A1CFF0000F0EA4F /* AppDelegate.h */,
 				CAF2563A1A1CFF0000F0EA4F /* AppDelegate.m */,
 				CA86CE911A1EB311009CDD7C /* SamplesTableViewController.h */,
 				CA86CE921A1EB311009CDD7C /* SamplesTableViewController.m */,
-				CA784D9E1A1F982F003F953B /* Physics and Chemistry of Color.pdf */,
 				CA86CE961A1EB561009CDD7C /* Wikipedia.pdf */,
 				CAF2563F1A1CFF0000F0EA4F /* Main.storyboard */,
 				CAF256421A1CFF0100F0EA4F /* Images.xcassets */,
@@ -352,7 +344,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA784D9F1A1F982F003F953B /* Physics and Chemistry of Color.pdf in Resources */,
 				CA86CE971A1EB561009CDD7C /* Wikipedia.pdf in Resources */,
 				CAF256411A1CFF0000F0EA4F /* Main.storyboard in Resources */,
 				CAF256431A1CFF0100F0EA4F /* Images.xcassets in Resources */,
@@ -414,7 +405,6 @@
 				CAF256891A1CFF2C00F0EA4F /* PDFKPageContent.m in Sources */,
 				CAF2563B1A1CFF0000F0EA4F /* AppDelegate.m in Sources */,
 				CAF256871A1CFF2C00F0EA4F /* PDFKBasicPDFViewerSinglePageCollectionView.m in Sources */,
-				CA86CE9A1A1EB56C009CDD7C /* DebugScrollView.m in Sources */,
 				CAF256861A1CFF2C00F0EA4F /* PDFKBasicPDFViewer.m in Sources */,
 				CAF256821A1CFF2C00F0EA4F /* PDFKThumbQueue.m in Sources */,
 				CAF256831A1CFF2C00F0EA4F /* PDFKThumbRenderer.m in Sources */,

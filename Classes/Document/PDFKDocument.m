@@ -24,8 +24,26 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CommonCrypto/CommonCrypto.h>
 #import "PDFKDocument.h"
 #import "CGPDFDocument.h"
+
+static inline NSString *NSStringCCHashFunction(unsigned char *(function)(const void *data, CC_LONG len, unsigned char *md), CC_LONG digestLength, NSString *string)
+{
+    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
+    uint8_t digest[digestLength];
+    
+    function(data.bytes, (CC_LONG)data.length, digest);
+    
+    NSMutableString *output = [NSMutableString stringWithCapacity:digestLength * 2];
+    
+    for (int i = 0; i < digestLength; i++)
+    {
+        [output appendFormat:@"%02x", digest[i]];
+    }
+    
+    return output;
+}
 
 @implementation PDFKDocument
 
@@ -35,10 +53,8 @@
 {
 	PDFKDocument *document = nil;
     
-#warning Get better name generating method
     //Get the archive of the PDF
-	NSString *name = [filePath lastPathComponent]; // File name only
-	NSString *archiveFilePath = [PDFKDocument archiveFilePath:name];
+	NSString *archiveFilePath = [PDFKDocument archiveFilePathForFileAtPath:filePath];
     
     //Unarchive an archived ReaderDocument object from its property list
 	@try {
@@ -82,7 +98,7 @@
 			_password = [password copy];
 			_bookmarks = [NSMutableIndexSet new];
 			_currentPage = 1;
-            _fileURL = [NSURL fileURLWithPath:filePath];
+            _fileURL = [[NSURL alloc] initFileURLWithPath:filePath isDirectory:NO];
             
             [self loadDocumentInformation];
             
@@ -240,11 +256,11 @@
 	return [pathURL path];
 }
 
-+ (NSString *)archiveFilePath:(NSString *)filename
++ (NSString *)archiveFilePathForFileAtPath:(NSString *)path
 {
-	assert(filename != nil); // Ensure that the archive file name is not nil
+	assert(path != nil); // Ensure that the archive file name is not nil
 	NSString *archivePath = [PDFKDocument applicationSupportPath]; // Application's "~/Library/Application Support" path
-	NSString *archiveName = [[filename stringByDeletingPathExtension] stringByAppendingPathExtension:@"plist"];
+	NSString *archiveName = [NSStringCCHashFunction(CC_SHA256, CC_SHA256_DIGEST_LENGTH, path) stringByAppendingPathExtension:@"plist"];
 	return [archivePath stringByAppendingPathComponent:archiveName];
 }
 
@@ -273,15 +289,15 @@
 	return state;
 }
 
-- (BOOL)archiveWithFileName:(NSString *)filename
+- (BOOL)archiveWithFileAtPath:(NSString *)filePath
 {
-	NSString *archiveFilePath = [PDFKDocument archiveFilePath:filename];
+    NSString *archiveFilePath = [PDFKDocument archiveFilePathForFileAtPath:filePath];
 	return [NSKeyedArchiver archiveRootObject:self toFile:archiveFilePath];
 }
 
 - (void)saveReaderDocument
 {
-	[self archiveWithFileName:[[_fileURL path] lastPathComponent]];
+    [self archiveWithFileAtPath:_fileURL.path];
 }
 
 - (void)updateProperties

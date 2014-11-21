@@ -42,6 +42,7 @@
 		imageView.autoresizesSubviews = NO;
 		imageView.userInteractionEnabled = NO;
 		imageView.autoresizingMask = UIViewAutoresizingNone;
+        imageView.translatesAutoresizingMaskIntoConstraints = NO;
 		imageView.contentMode = UIViewContentModeScaleAspectFit;
         
 		[self addSubview:imageView];

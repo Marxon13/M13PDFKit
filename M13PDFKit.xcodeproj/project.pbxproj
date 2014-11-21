@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		186C7FBB404D4DA5AD113882 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88CCBC2FFD064D688D11FAD6 /* libPods.a */; };
 		CA784D9F1A1F982F003F953B /* Physics and Chemistry of Color.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CA784D9E1A1F982F003F953B /* Physics and Chemistry of Color.pdf */; };
+		CA784DA21A1F99A6003F953B /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA784DA11A1F99A6003F953B /* ImageIO.framework */; };
 		CA86CE8C1A1EAF45009CDD7C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA86CE8B1A1EAF45009CDD7C /* CoreGraphics.framework */; };
-		CA86CE8E1A1EAF4E009CDD7C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA86CE8D1A1EAF4E009CDD7C /* QuartzCore.framework */; };
 		CA86CE901A1EAF56009CDD7C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA86CE8F1A1EAF56009CDD7C /* MessageUI.framework */; };
 		CA86CE931A1EB311009CDD7C /* SamplesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA86CE921A1EB311009CDD7C /* SamplesTableViewController.m */; };
 		CA86CE971A1EB561009CDD7C /* Wikipedia.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CA86CE961A1EB561009CDD7C /* Wikipedia.pdf */; };
@@ -52,8 +52,8 @@
 		88CCBC2FFD064D688D11FAD6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B73E826AFCCB1D55EC99EF8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CA784D9E1A1F982F003F953B /* Physics and Chemistry of Color.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Physics and Chemistry of Color.pdf"; path = "../../../../../Physics Textbooks/Physics and Chemistry of Color.pdf"; sourceTree = "<group>"; };
+		CA784DA11A1F99A6003F953B /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		CA86CE8B1A1EAF45009CDD7C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		CA86CE8D1A1EAF4E009CDD7C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CA86CE8F1A1EAF56009CDD7C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		CA86CE911A1EB311009CDD7C /* SamplesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamplesTableViewController.h; sourceTree = "<group>"; };
 		CA86CE921A1EB311009CDD7C /* SamplesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SamplesTableViewController.m; sourceTree = "<group>"; };
@@ -107,8 +107,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA784DA21A1F99A6003F953B /* ImageIO.framework in Frameworks */,
 				CA86CE901A1EAF56009CDD7C /* MessageUI.framework in Frameworks */,
-				CA86CE8E1A1EAF4E009CDD7C /* QuartzCore.framework in Frameworks */,
 				CA86CE8C1A1EAF45009CDD7C /* CoreGraphics.framework in Frameworks */,
 				186C7FBB404D4DA5AD113882 /* libPods.a in Frameworks */,
 			);
@@ -127,8 +127,8 @@
 		11A6D3166B9E4DF1A7340B13 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA784DA11A1F99A6003F953B /* ImageIO.framework */,
 				CA86CE8F1A1EAF56009CDD7C /* MessageUI.framework */,
-				CA86CE8D1A1EAF4E009CDD7C /* QuartzCore.framework */,
 				CA86CE8B1A1EAF45009CDD7C /* CoreGraphics.framework */,
 				88CCBC2FFD064D688D11FAD6 /* libPods.a */,
 			);

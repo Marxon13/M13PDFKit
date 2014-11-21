@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "M13PDFKit"
-  s.version      = "0.9.0"
+  s.version      = "0.9.1"
   s.summary      = "M13PDFKit is an iBooks like PDF viewer that can be embedded in iOS applications."
 
   s.description  = <<-DESC
@@ -25,9 +25,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
   s.author             = { "Brandon McQuilkin" => "marxon13@yahoo.com" }
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '8.0'
 
-  s.source = { :git => "https://github.com/Marxon13/M13PDFKit.git", :tag => "v0.9.0"}
+  s.source = { :git => "https://github.com/Marxon13/M13PDFKit.git", :tag => "v0.9.1"}
 
   s.source_files  = 'Classes/*', 'Resources/*'
 

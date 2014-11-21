@@ -64,7 +64,16 @@ CGPDFDocumentRef CGPDFDocumentCreate(NSURL *url, NSString *password)
 			}
 		} else {
             #ifdef DEBUG
-            NSLog(@"CGPDFDocumentCreate: Unable to load PDF Document.");
+            
+            //Double check that the file exists
+            NSError *error;
+            BOOL urlExists = [url checkResourceIsReachableAndReturnError:&error];
+            if (urlExists) {
+                NSLog(@"CGPDFDocumentCreate: Unable to load PDF Document. It seems to be corrupted.");
+            } else {
+                NSLog(@"CGPDFDocumentCreate: Unable to load PDF Document. %@", error.localizedDescription);
+            }
+            
             #endif
         }
 	} else {

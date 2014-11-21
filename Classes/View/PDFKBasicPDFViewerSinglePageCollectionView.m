@@ -81,7 +81,7 @@
 {
     PDFKBasicPDFViewerSinglePageCollectionViewCell *cell = [self dequeueReusableCellWithReuseIdentifier:@"ContentCell" forIndexPath:indexPath];
     
-    CGRect contentSize;
+    CGRect contentSize = CGRectZero;
     contentSize.size = [self collectionView:self layout:self.collectionViewLayout sizeForItemAtIndexPath:indexPath];
     
     //Get the page number

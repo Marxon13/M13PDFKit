@@ -293,7 +293,7 @@
         }
         
         //Add list
-        UIBarButtonItem *listItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Thumbs"] landscapeImagePhone:[UIImage imageNamed:@"Thumbs"] style:UIBarButtonItemStyleBordered target:self action:@selector(list)];
+        UIBarButtonItem *listItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Thumbs"] landscapeImagePhone:[UIImage imageNamed:@"Thumbs"] style:UIBarButtonItemStylePlain target:self action:@selector(list)];
         [buttonsArray addObject:listItem];
         
         //Sharing Button
@@ -317,9 +317,9 @@
             //Add bookmarks
             //Change image based on wether or not the page is bookmarked
             if (![_document.bookmarks containsIndex:_document.currentPage]) {
-                _bookmarkItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Bookmark"] style:UIBarButtonItemStyleBordered target:self action:@selector(bookmark)];
+                _bookmarkItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Bookmark"] style:UIBarButtonItemStylePlain target:self action:@selector(bookmark)];
             } else {
-                _bookmarkItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Bookmarked"] style:UIBarButtonItemStyleBordered target:self action:@selector(bookmark)];
+                _bookmarkItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Bookmarked"] style:UIBarButtonItemStylePlain target:self action:@selector(bookmark)];
             }
             
             [buttonsArray addObject:_bookmarkItem];
@@ -341,7 +341,7 @@
         }
         
         //Go back
-        UIBarButtonItem *listItem = [[UIBarButtonItem alloc] initWithTitle:@"Resume" style:UIBarButtonItemStyleBordered target:self action:@selector(list)];
+        UIBarButtonItem *listItem = [[UIBarButtonItem alloc] initWithTitle:@"Resume" style:UIBarButtonItemStylePlain target:self action:@selector(list)];
         [buttonsArray addObject:listItem];
         
         //Flexible space

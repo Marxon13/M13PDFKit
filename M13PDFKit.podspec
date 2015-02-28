@@ -29,7 +29,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
   s.source = { :git => "https://github.com/Marxon13/M13PDFKit.git", :tag => "v1.0.0"}
 
-  s.source_files  = 'Classes/*', 'Resources/*'
+  s.source_files  = 'Classes/**/*.{h,m}'
 
   s.frameworks = 'Foundation', 'CoreGraphics', 'ImageIO', 'UIKit'
 

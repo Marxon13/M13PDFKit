@@ -29,9 +29,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
   s.source = { :git => "https://github.com/Marxon13/M13PDFKit.git", :tag => "v1.0.0"}
 
-  s.source_files  = 'Classes/*', 'Resources/*'
+  s.source_files  = 'Classes/**/*.{h,m}'	
+  
+  s.ios.resource_bundle         = { 'M13PDFKitResources' => 'Resources/*' }
 
   s.frameworks = 'Foundation', 'CoreGraphics', 'ImageIO', 'UIKit'
 
   s.requires_arc = true
+  
+  s.dependency                  'TTOpenInAppActivity'
 end

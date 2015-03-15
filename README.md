@@ -28,6 +28,46 @@ Screenshots:
 <img src="https://raw.github.com/Marxon13/M13PDFKit/master/ReadmeResources/IMG_1045.PNG" width="300px">
 
 
+Installation
+-------------
+
+#### Podfile
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+
+pod 'M13PDFKit', '1.0.2'
+```
+
+Usage
+-------------
+
+*Prerequisite:* In the storyboard, the ViewController that is intended to display the PDF file needs to be in a UINavigationController stack and its corresponding class needs to be `PDFKBasicPDFViewer`
+
+Next, in the `prepareSegue` method of your ViewController which segues to your PDF View Controller you will then need to add the following lines:
+
+**Objective-C**
+```objective-c
+//Create the document for the viewer when the segue is performed.
+PDFKBasicPDFViewer *viewer = (PDFKBasicPDFViewer *)segue.destinationViewController;
+
+//Load the document
+PDFKDocument *document = [PDFKDocument documentWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Your PDF document actual location" ofType:@"pdf"] password:nil];
+[viewer loadDocument:document];
+```
+
+**Swift**
+```swift
+//Create the document for the viewer when the segue is performed.
+var viewer: PDFKBasicPDFViewer = segue.destinationViewController as PDFKBasicPDFViewer
+
+//Load the document (pdfUrl represents the path on the phone of the pdf document you wish to load)
+var document: PDFKDocument = PDFKDocument(contentsOfFile: pdfUrl!, password: nil)
+viewer.loadDocument(document)
+```
+
+In any case, you can see an example here in the [SamplesTableViewController](https://github.com/Marxon13/M13PDFKit/blob/master/M13PDFKit/SamplesTableViewController.m#L42) (Obj-C only)
+
 Issues:
 -------------
 There are two issues I am unable to resolve with the framework, and would like help solving.

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PBh-gG-M1N">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PBh-gG-M1N">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="546" y="265"/>
         </scene>
-        <!--BasicPDF Viewer-->
+        <!--BasicPDF Viewer Swift-->
         <scene sceneID="anj-bp-Fxo">
             <objects>
-                <viewController id="CXb-Wn-k78" customClass="PDFKBasicPDFViewer" sceneMemberID="viewController">
+                <viewController id="CXb-Wn-k78" customClass="PDFKBasicPDFViewerSwift" customModule="M13PDFKit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zM8-GG-3D0"/>
                         <viewControllerLayoutGuide type="bottom" id="0WJ-rK-MYu"/>

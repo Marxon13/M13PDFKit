@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		186C7FBB404D4DA5AD113882 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88CCBC2FFD064D688D11FAD6 /* libPods.a */; };
+		537D2E3A1AD279D0002849D2 /* PDFKBasicPDFViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D2E391AD279D0002849D2 /* PDFKBasicPDFViewer.swift */; };
 		CA784DA21A1F99A6003F953B /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA784DA11A1F99A6003F953B /* ImageIO.framework */; };
 		CA86CE8C1A1EAF45009CDD7C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA86CE8B1A1EAF45009CDD7C /* CoreGraphics.framework */; };
 		CA86CE901A1EAF56009CDD7C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA86CE8F1A1EAF56009CDD7C /* MessageUI.framework */; };
@@ -47,6 +48,8 @@
 
 /* Begin PBXFileReference section */
 		3BC96A8F8D1C3AA80967EB3F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		537D2E381AD27917002849D2 /* M13PDFKit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "M13PDFKit-Bridging-Header.h"; sourceTree = "<group>"; };
+		537D2E391AD279D0002849D2 /* PDFKBasicPDFViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFKBasicPDFViewer.swift; sourceTree = "<group>"; };
 		88CCBC2FFD064D688D11FAD6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B73E826AFCCB1D55EC99EF8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CA784DA11A1F99A6003F953B /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -207,6 +210,7 @@
 				CAF2565D1A1CFF2C00F0EA4F /* Document */,
 				CAF256621A1CFF2C00F0EA4F /* Thumbs */,
 				CAF2566F1A1CFF2C00F0EA4F /* View */,
+				537D2E381AD27917002849D2 /* M13PDFKit-Bridging-Header.h */,
 			);
 			path = Classes;
 			sourceTree = SOURCE_ROOT;
@@ -258,6 +262,7 @@
 				CAF2567B1A1CFF2C00F0EA4F /* PDFKPageContentView.m */,
 				CAF2567C1A1CFF2C00F0EA4F /* PDFKPageScrubber.h */,
 				CAF2567D1A1CFF2C00F0EA4F /* PDFKPageScrubber.m */,
+				537D2E391AD279D0002849D2 /* PDFKBasicPDFViewer.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -413,6 +418,7 @@
 				CAF2568A1A1CFF2C00F0EA4F /* PDFKPageContentLayer.m in Sources */,
 				CAF256851A1CFF2C00F0EA4F /* PDFKThumbView.m in Sources */,
 				CAF256801A1CFF2C00F0EA4F /* PDFKThumbCache.m in Sources */,
+				537D2E3A1AD279D0002849D2 /* PDFKBasicPDFViewer.swift in Sources */,
 				CAF256881A1CFF2C00F0EA4F /* PDFKBasicPDFViewerThumbsCollectionView.m in Sources */,
 				CAF256381A1CFF0000F0EA4F /* main.m in Sources */,
 			);
@@ -532,10 +538,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = M13PDFKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Classes/M13PDFKit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -545,10 +554,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = M13PDFKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Classes/M13PDFKit-Bridging-Header.h";
 			};
 			name = Release;
 		};

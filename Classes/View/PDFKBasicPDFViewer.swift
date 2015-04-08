@@ -632,8 +632,8 @@ class PDFKBasicPDFViewerSwift: UIViewController, UIToolbarDelegate, UIDocumentIn
   }
   
   func handleDoubleTap(gestureRecognizer: UITapGestureRecognizer) -> Void {
-    if (gestureRecognizer.state == UIGestureRecognizerState.Began) {
-      if (gestureRecognizer.numberOfTouches() == 1) {
+    if (gestureRecognizer.state == UIGestureRecognizerState.Ended) {
+      if (gestureRecognizer.numberOfTouchesRequired == 1) {
         //Zoom in
         var cell: PDFKBasicPDFViewerSinglePageCollectionViewCell = self.pageCollectionView.visibleCells()[0] as PDFKBasicPDFViewerSinglePageCollectionViewCell
         cell.pageContentView.zoomIncrement()
@@ -660,8 +660,8 @@ class PDFKBasicPDFViewerSwift: UIViewController, UIToolbarDelegate, UIDocumentIn
             if (self.navigationToolbar.alpha == 0.0) {
               self.navigationToolbar.alpha = 1.0
             }
-            if (self.pageScrubber.alpha == 1.0) {
-              self.pageScrubber.alpha = 0.0
+            if (self.pageScrubber.alpha == 0.0) {
+              self.pageScrubber.alpha = 1.0
             }
           }
         )
@@ -670,16 +670,18 @@ class PDFKBasicPDFViewerSwift: UIViewController, UIToolbarDelegate, UIDocumentIn
         UIView.animateWithDuration(
           Double(0.3),
           animations: {
-            if (self.navigationToolbar.alpha == 0.0) {
-              self.navigationToolbar.alpha = 1.0
+            if (self.navigationToolbar.alpha == 1.0) {
+              self.navigationToolbar.alpha = 0.0
             }
             if (self.pageScrubber.alpha == 1.0) {
               self.pageScrubber.alpha = 0.0
             }
           },
           completion: {(finished: Bool) -> Void in
-            self.navigationToolbar.hidden = true
-            self.pageScrubber.hidden = true
+            if finished {
+              self.navigationToolbar.hidden = true
+              self.pageScrubber.hidden = true
+            }
           }
         )
       }
@@ -718,7 +720,7 @@ class PDFKBasicPDFViewerSwift: UIViewController, UIToolbarDelegate, UIDocumentIn
       )
     } else {
       showingSinglePage = true
-      resetNavigationToolbar()
+      self.resetNavigationToolbar()
       pageScrubber.hidden = false
       pageCollectionView.hidden = false
       UIView.animateWithDuration(

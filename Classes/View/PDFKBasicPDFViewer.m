@@ -257,13 +257,14 @@
     return UIBarPositionBottom;
 }
 
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
-    //Invalidate the layouts of the collection views on rotation, and animate the rotation.
-    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+-(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+    [super willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
     
     [_thumbsCollectionView.collectionViewLayout invalidateLayout];
     [_pageCollectionView.collectionViewLayout invalidateLayout];
+    
+    [_pageCollectionView displayPage:_document.currentPage animated:NO];
+    
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation

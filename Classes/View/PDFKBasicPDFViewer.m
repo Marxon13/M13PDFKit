@@ -115,13 +115,6 @@
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
     //Defaults
-    _enableBookmarks = YES;
-    _enableSharing = YES;
-    _enablePrinting = YES;
-    _enableOpening = YES;
-    _enableThumbnailSlider = YES;
-    _enablePreview = YES;
-    _standalone = YES;
     _document = document;
     
     //Create the thumbs view

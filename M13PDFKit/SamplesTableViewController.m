@@ -40,6 +40,11 @@
     if ([segue.identifier isEqualToString:@"Basic Sample"]) {
         //Create the document for the viewer when the segue is performed.
         PDFKBasicPDFViewer *viewer = (PDFKBasicPDFViewer *)segue.destinationViewController;
+        viewer.enableBookmarks = YES;
+        viewer.enableOpening = YES;
+        viewer.enablePrinting = YES;
+        viewer.enableSharing = YES;
+        viewer.enableThumbnailSlider = YES;
         
         //Load the document
         PDFKDocument *document = [PDFKDocument documentWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Wikipedia" ofType:@"pdf"] password:nil];

@@ -1,1 +1,0 @@
-../../../TTOpenInAppActivity/TTOpenInAppActivity/TTOpenInAppActivity.h

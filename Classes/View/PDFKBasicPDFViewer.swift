@@ -38,22 +38,17 @@ class PDFKBasicPDFViewerSwift: UIViewController, UIToolbarDelegate, UIDocumentIn
   
   
   /** Initialization and Loading **/
-  
-  override init(){
-    super.init()
-  }
-  
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
     super.init(nibName: nil, bundle: nil)
   }
   
   init(document: PDFKDocument) {
     self.document = document
-    super.init()
+    super.init(nibName: nil, bundle: nil)
   }
-  
+
   required init(coder aDecoder: NSCoder) {
-    super.init()
+      super.init(coder: aDecoder)
   }
   
   func loadDocument(document: PDFKDocument) -> Void {
@@ -85,23 +80,22 @@ class PDFKBasicPDFViewerSwift: UIViewController, UIToolbarDelegate, UIDocumentIn
     self.thumbsCollectionView.pageDelegate = self
     
     //Set the constraints on the collection view.
-    var thumbsConstraints: NSMutableArray = NSMutableArray(
-      array: NSLayoutConstraint.constraintsWithVisualFormat(
+    var thumbsHorizontalConstraints =
+      NSLayoutConstraint.constraintsWithVisualFormat(
         "H:|[collectionView]|",
         options: NSLayoutFormatOptions.AlignAllBaseline,
-        metrics:nil,
+        metrics: nil,
         views: ["superview": self.view, "collectionView": self.thumbsCollectionView])
-    )
-    
-    thumbsConstraints.addObjectsFromArray(
+      
+    var thumbsVerticalConstraints =
       NSLayoutConstraint.constraintsWithVisualFormat(
         "V:|[collectionView]|",
         options: NSLayoutFormatOptions.AlignAllLeft,
         metrics: nil,
-        views: ["superview": self.view, "collectionView": self.thumbsCollectionView]
-      )
-    )
-    self.view.addConstraints(thumbsConstraints)
+        views: ["superview": self.view, "collectionView": self.thumbsCollectionView])
+  
+    self.view.addConstraints(thumbsHorizontalConstraints)
+    self.view.addConstraints(thumbsVerticalConstraints)
     
     //Set the content insets, Need to account for top bar, navigation toolbar, and bottom bar.
     self.thumbsCollectionView.hidden = true
@@ -132,7 +126,7 @@ class PDFKBasicPDFViewerSwift: UIViewController, UIToolbarDelegate, UIDocumentIn
         views: ["superview": self.view, "collectionView": self.pageCollectionView]
       )
     )
-    self.view.addConstraints(pageConstraints)
+    self.view.addConstraints(pageConstraints as [AnyObject])
     
     
     /** Create the navigation bar **/
@@ -160,7 +154,7 @@ class PDFKBasicPDFViewerSwift: UIViewController, UIToolbarDelegate, UIDocumentIn
         views: ["toolbar": self.navigationToolbar, "topLayout": self.topLayoutGuide]
       )
     )
-    self.view.addConstraints(navigationToolbarConstraints)
+    self.view.addConstraints(navigationToolbarConstraints as [AnyObject])
     //Finish setup
     self.navigationToolbar.sizeToFit()
     resetNavigationToolbar()
@@ -196,7 +190,7 @@ class PDFKBasicPDFViewerSwift: UIViewController, UIToolbarDelegate, UIDocumentIn
         views: ["scrubber": self.pageScrubber, "bottomLayout": self.bottomLayoutGuide]
       )
     )
-    self.view.addConstraints(pageScrubberConstraints)
+    self.view.addConstraints(pageScrubberConstraints as [AnyObject])
     //Finish
     self.pageScrubber.sizeToFit()
     
@@ -271,7 +265,7 @@ class PDFKBasicPDFViewerSwift: UIViewController, UIToolbarDelegate, UIDocumentIn
     self.view.layoutSubviews()
   }
   
-  func positionForBar(bar: UIBarPositioning!) -> UIBarPosition {
+  func positionForBar(bar: UIBarPositioning) -> UIBarPosition {
     if bar === self.navigationToolbar {
       return UIBarPosition.Top
     }
@@ -288,6 +282,7 @@ class PDFKBasicPDFViewerSwift: UIViewController, UIToolbarDelegate, UIDocumentIn
     thumbsCollectionView.collectionViewLayout.invalidateLayout()
     pageCollectionView.collectionViewLayout.invalidateLayout()
   }
+
   
   override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) -> Void {
     super.didRotateFromInterfaceOrientation(fromInterfaceOrientation)
@@ -461,7 +456,7 @@ class PDFKBasicPDFViewerSwift: UIViewController, UIToolbarDelegate, UIDocumentIn
       buttonsArray.addObject(bookmarkItem)
     }
     
-    self.navigationToolbar.setItems(buttonsArray, animated: true)
+    self.navigationToolbar.setItems(buttonsArray as [AnyObject], animated: true)
   }
   
   /** Actions **/
@@ -492,7 +487,7 @@ class PDFKBasicPDFViewerSwift: UIViewController, UIToolbarDelegate, UIDocumentIn
       if (activityViewController.excludedActivityTypes!.count == 1){
         array.addObjectsFromArray(activityViewController.excludedActivityTypes!)
       }
-      activityViewController.excludedActivityTypes = array
+      activityViewController.excludedActivityTypes = array as [AnyObject]
     }
     
     if (UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Phone) {
@@ -635,11 +630,11 @@ class PDFKBasicPDFViewerSwift: UIViewController, UIToolbarDelegate, UIDocumentIn
     if (gestureRecognizer.state == UIGestureRecognizerState.Ended) {
       if (gestureRecognizer.numberOfTouchesRequired == 1) {
         //Zoom in
-        var cell: PDFKBasicPDFViewerSinglePageCollectionViewCell = self.pageCollectionView.visibleCells()[0] as PDFKBasicPDFViewerSinglePageCollectionViewCell
+        var cell: PDFKBasicPDFViewerSinglePageCollectionViewCell = self.pageCollectionView.visibleCells()[0] as! PDFKBasicPDFViewerSinglePageCollectionViewCell
         cell.pageContentView.zoomIncrement()
       } else {
         //Zoom out
-        var cell: PDFKBasicPDFViewerSinglePageCollectionViewCell = self.pageCollectionView.visibleCells()[0] as PDFKBasicPDFViewerSinglePageCollectionViewCell
+        var cell: PDFKBasicPDFViewerSinglePageCollectionViewCell = self.pageCollectionView.visibleCells()[0] as! PDFKBasicPDFViewerSinglePageCollectionViewCell
         cell.pageContentView.zoomDecrement()
       }
     }

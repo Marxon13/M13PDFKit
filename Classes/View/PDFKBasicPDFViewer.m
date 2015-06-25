@@ -453,6 +453,10 @@
     self.document.currentPage = page;
     [self.pageScrubber updateScrubber];
     [self resetNavigationToolbar];
+    
+    if (_pageChangeBlock) {
+        _pageChangeBlock(page);
+    }
 }
 
 - (void)nextPage

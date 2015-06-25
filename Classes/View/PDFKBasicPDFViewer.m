@@ -435,7 +435,7 @@
 
 - (void)thumbCollectionView:(PDFKBasicPDFViewerThumbsCollectionView *)thumbsCollectionView didSelectPage:(NSUInteger)page
 {
-    [self.pageCollectionView displayPage:page animated:NO];
+    [self.pageCollectionView displayPage:page animated:YES];
     self.document.currentPage = page;
     [self.pageScrubber updateScrubber];
     [self toggleSinglePageView];

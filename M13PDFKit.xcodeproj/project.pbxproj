@@ -34,6 +34,7 @@
 		CAF2568A1A1CFF2C00F0EA4F /* PDFKPageContentLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF256791A1CFF2C00F0EA4F /* PDFKPageContentLayer.m */; };
 		CAF2568B1A1CFF2C00F0EA4F /* PDFKPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF2567B1A1CFF2C00F0EA4F /* PDFKPageContentView.m */; };
 		CAF2568C1A1CFF2C00F0EA4F /* PDFKPageScrubber.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF2567D1A1CFF2C00F0EA4F /* PDFKPageScrubber.m */; };
+		EA2F477C1B3DD6F200BA50E4 /* CGPDFDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F477B1B3DD6F200BA50E4 /* CGPDFDocument.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		CAF2567B1A1CFF2C00F0EA4F /* PDFKPageContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFKPageContentView.m; sourceTree = "<group>"; };
 		CAF2567C1A1CFF2C00F0EA4F /* PDFKPageScrubber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFKPageScrubber.h; sourceTree = "<group>"; };
 		CAF2567D1A1CFF2C00F0EA4F /* PDFKPageScrubber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFKPageScrubber.m; sourceTree = "<group>"; };
+		EA2F477B1B3DD6F200BA50E4 /* CGPDFDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPDFDocument.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 			children = (
 				CAF2565E1A1CFF2C00F0EA4F /* CGPDFDocument.h */,
 				CAF2565F1A1CFF2C00F0EA4F /* CGPDFDocument.m */,
+				EA2F477B1B3DD6F200BA50E4 /* CGPDFDocument.swift */,
 				CAF256601A1CFF2C00F0EA4F /* PDFKDocument.h */,
 				CAF256611A1CFF2C00F0EA4F /* PDFKDocument.m */,
 			);
@@ -419,6 +422,7 @@
 				CAF256851A1CFF2C00F0EA4F /* PDFKThumbView.m in Sources */,
 				CAF256801A1CFF2C00F0EA4F /* PDFKThumbCache.m in Sources */,
 				537D2E3A1AD279D0002849D2 /* PDFKBasicPDFViewer.swift in Sources */,
+				EA2F477C1B3DD6F200BA50E4 /* CGPDFDocument.swift in Sources */,
 				CAF256881A1CFF2C00F0EA4F /* PDFKBasicPDFViewerThumbsCollectionView.m in Sources */,
 				CAF256381A1CFF0000F0EA4F /* main.m in Sources */,
 			);

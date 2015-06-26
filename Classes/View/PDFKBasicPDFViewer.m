@@ -115,13 +115,6 @@
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
     //Defaults
-    _enableBookmarks = YES;
-    _enableSharing = YES;
-    _enablePrinting = YES;
-    _enableOpening = YES;
-    _enableThumbnailSlider = YES;
-    _enablePreview = YES;
-    _standalone = YES;
     _document = document;
     
     //Create the thumbs view
@@ -257,13 +250,14 @@
     return UIBarPositionBottom;
 }
 
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
-    //Invalidate the layouts of the collection views on rotation, and animate the rotation.
-    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+-(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+    [super willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
     
     [_thumbsCollectionView.collectionViewLayout invalidateLayout];
     [_pageCollectionView.collectionViewLayout invalidateLayout];
+    
+    [_pageCollectionView displayPage:_document.currentPage animated:NO];
+    
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
@@ -441,7 +435,7 @@
 
 - (void)thumbCollectionView:(PDFKBasicPDFViewerThumbsCollectionView *)thumbsCollectionView didSelectPage:(NSUInteger)page
 {
-    [self.pageCollectionView displayPage:page animated:NO];
+    [self.pageCollectionView displayPage:page animated:YES];
     self.document.currentPage = page;
     [self.pageScrubber updateScrubber];
     [self toggleSinglePageView];
@@ -459,6 +453,10 @@
     self.document.currentPage = page;
     [self.pageScrubber updateScrubber];
     [self resetNavigationToolbar];
+    
+    if (_pageChangeBlock) {
+        _pageChangeBlock(page);
+    }
 }
 
 - (void)nextPage

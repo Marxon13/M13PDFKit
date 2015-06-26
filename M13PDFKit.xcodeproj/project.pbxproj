@@ -250,6 +250,7 @@
 			children = (
 				CAF256701A1CFF2C00F0EA4F /* PDFKBasicPDFViewer.h */,
 				CAF256711A1CFF2C00F0EA4F /* PDFKBasicPDFViewer.m */,
+				537D2E391AD279D0002849D2 /* PDFKBasicPDFViewer.swift */,
 				CAF256721A1CFF2C00F0EA4F /* PDFKBasicPDFViewerSinglePageCollectionView.h */,
 				CAF256731A1CFF2C00F0EA4F /* PDFKBasicPDFViewerSinglePageCollectionView.m */,
 				CAF256741A1CFF2C00F0EA4F /* PDFKBasicPDFViewerThumbsCollectionView.h */,
@@ -262,7 +263,6 @@
 				CAF2567B1A1CFF2C00F0EA4F /* PDFKPageContentView.m */,
 				CAF2567C1A1CFF2C00F0EA4F /* PDFKPageScrubber.h */,
 				CAF2567D1A1CFF2C00F0EA4F /* PDFKPageScrubber.m */,
-				537D2E391AD279D0002849D2 /* PDFKBasicPDFViewer.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

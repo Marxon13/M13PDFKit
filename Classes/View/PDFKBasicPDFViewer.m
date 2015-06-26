@@ -435,7 +435,7 @@
 
 - (void)thumbCollectionView:(PDFKBasicPDFViewerThumbsCollectionView *)thumbsCollectionView didSelectPage:(NSUInteger)page
 {
-    [self.pageCollectionView displayPage:page animated:NO];
+    [self.pageCollectionView displayPage:page animated:YES];
     self.document.currentPage = page;
     [self.pageScrubber updateScrubber];
     [self toggleSinglePageView];
@@ -453,6 +453,10 @@
     self.document.currentPage = page;
     [self.pageScrubber updateScrubber];
     [self resetNavigationToolbar];
+    
+    if (_pageChangeBlock) {
+        _pageChangeBlock(page);
+    }
 }
 
 - (void)nextPage

@@ -16,6 +16,8 @@
 #import <UIKit/UIKit.h>
 @class PDFKDocument;
 
+typedef void (^PDFKBasicPDFViewerPageChangeBlock)(NSUInteger page);
+
 @interface PDFKBasicPDFViewer : UIViewController
 
 /**@name Initalization*/
@@ -44,6 +46,8 @@
 - (void)displayPage:(NSUInteger)page;
 
 /**@name Properties*/
+
+@property (nonatomic, strong) PDFKBasicPDFViewerPageChangeBlock pageChangeBlock;
 
 @property (nonatomic, strong, readonly) PDFKDocument *document;
 

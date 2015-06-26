@@ -100,9 +100,16 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    //Get the current cell and notify the delegate
-    NSIndexPath *indexPath = [self indexPathsForVisibleItems][0];
-    NSUInteger page = indexPath.row + 1;
+    //Get the current page and notify the delegate
+    NSUInteger page = (scrollView.contentOffset.x + scrollView.frame.size.width) / scrollView.frame.size.width;
+    
+    [_singlePageDelegate singlePageCollectionView:self didDisplayPage:page];
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+    //Get the current page and notify the delegate
+    NSUInteger page = (scrollView.contentOffset.x + scrollView.frame.size.width) / scrollView.frame.size.width;
     
     [_singlePageDelegate singlePageCollectionView:self didDisplayPage:page];
 }

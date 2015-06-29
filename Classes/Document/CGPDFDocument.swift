@@ -24,33 +24,30 @@ func CGPDFDocumentCreateSwift(url: NSURL, password: String?) -> CGPDFDocumentRef
     
     //Did the document load?
     if let docRef = docRef {
+      
+      //If the document is not password protected, just return the ref
+      if !CGPDFDocumentIsEncrypted(docRef){
+        return docRef
+      }
+      
+      //If the document is unlockable with an empty pass, just return the ref
+      if CGPDFDocumentUnlockWithPassword(docRef, "") {
+        return docRef
+      }
+      
+      //Nope, now let's try the provided password to unlock the PDF
+      if let password = password {
+        var text: [CChar] = [] // char array buffer for the string conversion
+        password.getCString(&text, maxLength: 126, encoding: NSUTF8StringEncoding)
         
-        //Is the document password protected?
-        if CGPDFDocumentIsEncrypted(docRef) == true {
-            
-            //Try a blank password first, per Apple's Quartz PDF example
-            if CGPDFDocumentUnlockWithPassword(docRef, "") == false {
-                
-                //Nope, now let's try the provided password to unlock the PDF
-                if let password = password {
-                    var text: [CChar] = [] // char array buffer for the string conversion
-                    password.getCString(&text, maxLength: 126, encoding: NSUTF8StringEncoding)
-                    
-                    //If we can't unlock the document, log failure/
-                    if !CGPDFDocumentUnlockWithPassword(docRef, text) {
-                        #if DEBUG
-                            println("CGPDFDocumentCreate: Unable to unlock [\(url)] with [\(password)]")
-                        #endif
-                    }
-                }
-            }
-            
-            //If we failed to unlock the document, cleanup
-            if CGPDFDocumentIsUnlocked(docRef) == false {
-                //No longer needed in Swift?
-                //CGPDFDocumentRelease(docRef), docRef = NULL;
-            }
+        //If we can't unlock the document, log failure/
+        if !CGPDFDocumentUnlockWithPassword(docRef, text) {
+          #if DEBUG
+            println("CGPDFDocumentCreate: Unable to unlock [\(url)] with [\(password)]")
+          #endif
         }
+      }
+      
     } else {
         #if DEBUG
             //Double check that the file exists
@@ -73,7 +70,7 @@ Wether or not the given password will unlock the PDF file at the given URL.
 @param url      The URL of the PDF file to check.
 @param password The password to attempt to unlock the PDF file with.
 
-@return YES if the password unlocks the document. NO otherwise.
+@return true if the password unlocks the document. false otherwise.
 */
 func CGPDFDocumentCanBeUnlockedWithPasswordSwift(url: NSURL, password: String?) -> Bool {
     var unlockable: Bool = false
@@ -83,28 +80,29 @@ func CGPDFDocumentCanBeUnlockedWithPasswordSwift(url: NSURL, password: String?) 
     //Did the document load?
     if let docRef = docRef {
         
-        //Is the document locked?
-        if CGPDFDocumentIsEncrypted(docRef) {
-            
-            //Try a blank password first, per Apple's Quartz PDF example
-            if CGPDFDocumentUnlockWithPassword(docRef, "") == false {
-                
-                //Nope, now let's try the provided password to unlock the PDF
-                if let password = password {
-                    var text: [CChar] = [] // char array buffer for the string conversion
-                    password.getCString(&text, maxLength: 126, encoding: NSUTF8StringEncoding)
-                    
-                    //Can we unlock it?
-                    if CGPDFDocumentUnlockWithPassword(docRef, text) {
-                        unlockable = true
-                    }
-                }
-            }
+      //Is the document unlocked?
+      if !CGPDFDocumentIsEncrypted(docRef) {
+        return unlockable
+      }
+      //Is the document unlockable with a blank password first, per Apple's Quartz PDF example
+      if CGPDFDocumentUnlockWithPassword(docRef, "") {
+        return unlockable
+      }
+      
+      //Nope, now let's try the provided password to unlock the PDF
+      if let password = password {
+        var text: [CChar] = [] // char array buffer for the string conversion
+        password.getCString(&text, maxLength: 126, encoding: NSUTF8StringEncoding)
+        
+        //Can we unlock it?
+        if CGPDFDocumentUnlockWithPassword(docRef, text) {
+          unlockable = true
         }
+      }
     }
-    
+
     //No need to cleanup the docRef in swift?
     //CGPDFDocumentRelease(docRef)
-    
+
     return unlockable
 }

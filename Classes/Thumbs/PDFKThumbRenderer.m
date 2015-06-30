@@ -27,7 +27,7 @@
 #import "PDFKThumbRequest.h"
 #import "PDFKThumbCache.h"
 #import "PDFKThumbView.h"
-#import "CGPDFDocument.h"
+#import "M13PDFKit-Swift.h"
 #import <ImageIO/ImageIO.h>
 
 @implementation PDFKThumbRenderer
@@ -73,7 +73,8 @@
     
 	CGImageRef imageRef = NULL;
     
-	CGPDFDocumentRef thePDFDocRef = CGPDFDocumentCreate(_request.fileURL, password);
+	//CGPDFDocumentRef thePDFDocRef = CGPDFDocumentCreate(_request.fileURL, password);
+    CGPDFDocumentRef thePDFDocRef = [CGPDFDocumentCreator CGPDFDocumentCreate:_request.fileURL password:password];
     
     // Check for non-NULL CGPDFDocumentRef
 	if (thePDFDocRef != NULL) {
@@ -161,6 +162,7 @@
 				CGContextConcatCTM(context, CGPDFPageGetDrawingTransform(thePDFPageRef, kCGPDFCropBox, thumbRect, 0, true));
                 
                 //Render
+                CGPDFDocumentRetain(thePDFDocRef);
 				CGContextDrawPDFPage(context, thePDFPageRef);
                 
                 //Get the image

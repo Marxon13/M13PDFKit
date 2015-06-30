@@ -25,7 +25,7 @@
 
 #import "PDFKPageContent.h"
 #import "PDFKPageContentLayer.h"
-#import "CGPDFDocument.h"
+#import "M13PDFKit-Swift.h"
 
 @implementation PDFKPageContent
 {
@@ -465,7 +465,8 @@
     
 	if (fileURL != nil) {
         
-		_PDFDocRef = CGPDFDocumentCreate(fileURL, phrase);
+		//_PDFDocRef = CGPDFDocumentCreate(fileURL, phrase);
+        _PDFDocRef = [CGPDFDocumentCreator CGPDFDocumentCreate:fileURL password:phrase];
         
 		if (_PDFDocRef != NULL) {
 			if (page < 1) page = 1; // Check the lower page bounds

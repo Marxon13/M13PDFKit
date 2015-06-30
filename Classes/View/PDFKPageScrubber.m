@@ -24,7 +24,7 @@
 //
 
 #import "PDFKPageScrubber.h"
-#import "PDFKDocument.h"
+#import "M13PDFKit-Swift.h"
 #import "PDFKThumbRequest.h"
 #import "PDFKThumbCache.h"
 

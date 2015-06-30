@@ -15,7 +15,7 @@
 
 
 #import "PDFKBasicPDFViewerThumbsCollectionView.h"
-#import "PDFKDocument.h"
+#import "M13PDFKit-Swift.h"
 #import "PDFKThumbView.h"
 #import "PDFKThumbRequest.h"
 #import "PDFKThumbCache.h"

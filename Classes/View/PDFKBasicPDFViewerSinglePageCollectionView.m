@@ -14,7 +14,7 @@
  */
 
 #import "PDFKBasicPDFViewerSinglePageCollectionView.h"
-#import "PDFKDocument.h"
+#import "M13PDFKit-Swift.h"
 #import "PDFKPageContentView.h"
 
 @interface PDFKBasicPDFViewerSinglePageCollectionView () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate>

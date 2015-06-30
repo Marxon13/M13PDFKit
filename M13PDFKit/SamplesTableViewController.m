@@ -7,8 +7,6 @@
 //
 
 #import "SamplesTableViewController.h"
-#import "PDFKBasicPDFViewer.h"
-#import "PDFKDocument.h"
 #import "M13PDFKit-Swift.h"
 
 
@@ -40,7 +38,7 @@
     
     if ([segue.identifier isEqualToString:@"Basic Sample"]) {
         //Create the document for the viewer when the segue is performed.
-        PDFKBasicPDFViewerSwift *viewer = (PDFKBasicPDFViewerSwift *)segue.destinationViewController;
+        PDFKBasicPDFViewer *viewer = (PDFKBasicPDFViewer *)segue.destinationViewController;
         viewer.enableBookmarks = YES;
         viewer.enableOpening = YES;
         viewer.enablePrinting = YES;

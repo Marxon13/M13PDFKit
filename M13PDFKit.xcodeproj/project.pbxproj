@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		186C7FBB404D4DA5AD113882 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88CCBC2FFD064D688D11FAD6 /* libPods.a */; };
+		99FD8AAE1B4569AA0082331C /* Bookmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 99FD8AA21B4569AA0082331C /* Bookmark.png */; };
+		99FD8AAF1B4569AA0082331C /* Bookmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99FD8AA31B4569AA0082331C /* Bookmark@2x.png */; };
+		99FD8AB01B4569AA0082331C /* Bookmark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99FD8AA41B4569AA0082331C /* Bookmark@3x.png */; };
+		99FD8AB11B4569AA0082331C /* Bookmarked.png in Resources */ = {isa = PBXBuildFile; fileRef = 99FD8AA51B4569AA0082331C /* Bookmarked.png */; };
+		99FD8AB21B4569AA0082331C /* Bookmarked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99FD8AA61B4569AA0082331C /* Bookmarked@2x.png */; };
+		99FD8AB31B4569AA0082331C /* Bookmarked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99FD8AA71B4569AA0082331C /* Bookmarked@3x.png */; };
+		99FD8AB41B4569AA0082331C /* PageList.png in Resources */ = {isa = PBXBuildFile; fileRef = 99FD8AA81B4569AA0082331C /* PageList.png */; };
+		99FD8AB51B4569AA0082331C /* PageList@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99FD8AA91B4569AA0082331C /* PageList@2x.png */; };
+		99FD8AB61B4569AA0082331C /* PageList@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99FD8AAA1B4569AA0082331C /* PageList@3x.png */; };
+		99FD8AB71B4569AA0082331C /* Thumbs.png in Resources */ = {isa = PBXBuildFile; fileRef = 99FD8AAB1B4569AA0082331C /* Thumbs.png */; };
+		99FD8AB81B4569AA0082331C /* Thumbs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99FD8AAC1B4569AA0082331C /* Thumbs@2x.png */; };
+		99FD8AB91B4569AA0082331C /* Thumbs@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99FD8AAD1B4569AA0082331C /* Thumbs@3x.png */; };
 		CA784DA21A1F99A6003F953B /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA784DA11A1F99A6003F953B /* ImageIO.framework */; };
 		CA86CE8C1A1EAF45009CDD7C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA86CE8B1A1EAF45009CDD7C /* CoreGraphics.framework */; };
 		CA86CE901A1EAF56009CDD7C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA86CE8F1A1EAF56009CDD7C /* MessageUI.framework */; };
@@ -48,6 +60,18 @@
 /* Begin PBXFileReference section */
 		3BC96A8F8D1C3AA80967EB3F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		88CCBC2FFD064D688D11FAD6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		99FD8AA21B4569AA0082331C /* Bookmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bookmark.png; path = Resources/Bookmark.png; sourceTree = SOURCE_ROOT; };
+		99FD8AA31B4569AA0082331C /* Bookmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bookmark@2x.png"; path = "Resources/Bookmark@2x.png"; sourceTree = SOURCE_ROOT; };
+		99FD8AA41B4569AA0082331C /* Bookmark@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bookmark@3x.png"; path = "Resources/Bookmark@3x.png"; sourceTree = SOURCE_ROOT; };
+		99FD8AA51B4569AA0082331C /* Bookmarked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bookmarked.png; path = Resources/Bookmarked.png; sourceTree = SOURCE_ROOT; };
+		99FD8AA61B4569AA0082331C /* Bookmarked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bookmarked@2x.png"; path = "Resources/Bookmarked@2x.png"; sourceTree = SOURCE_ROOT; };
+		99FD8AA71B4569AA0082331C /* Bookmarked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bookmarked@3x.png"; path = "Resources/Bookmarked@3x.png"; sourceTree = SOURCE_ROOT; };
+		99FD8AA81B4569AA0082331C /* PageList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PageList.png; path = Resources/PageList.png; sourceTree = SOURCE_ROOT; };
+		99FD8AA91B4569AA0082331C /* PageList@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PageList@2x.png"; path = "Resources/PageList@2x.png"; sourceTree = SOURCE_ROOT; };
+		99FD8AAA1B4569AA0082331C /* PageList@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PageList@3x.png"; path = "Resources/PageList@3x.png"; sourceTree = SOURCE_ROOT; };
+		99FD8AAB1B4569AA0082331C /* Thumbs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Thumbs.png; path = Resources/Thumbs.png; sourceTree = SOURCE_ROOT; };
+		99FD8AAC1B4569AA0082331C /* Thumbs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Thumbs@2x.png"; path = "Resources/Thumbs@2x.png"; sourceTree = SOURCE_ROOT; };
+		99FD8AAD1B4569AA0082331C /* Thumbs@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Thumbs@3x.png"; path = "Resources/Thumbs@3x.png"; sourceTree = SOURCE_ROOT; };
 		9B73E826AFCCB1D55EC99EF8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CA784DA11A1F99A6003F953B /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		CA86CE8B1A1EAF45009CDD7C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -139,6 +163,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		99FD8ABA1B4569AE0082331C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				99FD8AA21B4569AA0082331C /* Bookmark.png */,
+				99FD8AA31B4569AA0082331C /* Bookmark@2x.png */,
+				99FD8AA41B4569AA0082331C /* Bookmark@3x.png */,
+				99FD8AA51B4569AA0082331C /* Bookmarked.png */,
+				99FD8AA61B4569AA0082331C /* Bookmarked@2x.png */,
+				99FD8AA71B4569AA0082331C /* Bookmarked@3x.png */,
+				99FD8AA81B4569AA0082331C /* PageList.png */,
+				99FD8AA91B4569AA0082331C /* PageList@2x.png */,
+				99FD8AAA1B4569AA0082331C /* PageList@3x.png */,
+				99FD8AAB1B4569AA0082331C /* Thumbs.png */,
+				99FD8AAC1B4569AA0082331C /* Thumbs@2x.png */,
+				99FD8AAD1B4569AA0082331C /* Thumbs@3x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		CAF256291A1CFF0000F0EA4F = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				CAF2565B1A1CFF2C00F0EA4F /* Classes */,
+				99FD8ABA1B4569AE0082331C /* Images */,
 				CAF256391A1CFF0000F0EA4F /* AppDelegate.h */,
 				CAF2563A1A1CFF0000F0EA4F /* AppDelegate.m */,
 				CA86CE911A1EB311009CDD7C /* SamplesTableViewController.h */,
@@ -344,9 +388,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99FD8AB71B4569AA0082331C /* Thumbs.png in Resources */,
+				99FD8AB91B4569AA0082331C /* Thumbs@3x.png in Resources */,
 				CA86CE971A1EB561009CDD7C /* Wikipedia.pdf in Resources */,
+				99FD8AB01B4569AA0082331C /* Bookmark@3x.png in Resources */,
+				99FD8AAF1B4569AA0082331C /* Bookmark@2x.png in Resources */,
+				99FD8AB31B4569AA0082331C /* Bookmarked@3x.png in Resources */,
+				99FD8AAE1B4569AA0082331C /* Bookmark.png in Resources */,
+				99FD8AB11B4569AA0082331C /* Bookmarked.png in Resources */,
+				99FD8AB21B4569AA0082331C /* Bookmarked@2x.png in Resources */,
 				CAF256411A1CFF0000F0EA4F /* Main.storyboard in Resources */,
+				99FD8AB41B4569AA0082331C /* PageList.png in Resources */,
 				CAF256431A1CFF0100F0EA4F /* Images.xcassets in Resources */,
+				99FD8AB81B4569AA0082331C /* Thumbs@2x.png in Resources */,
+				99FD8AB61B4569AA0082331C /* PageList@3x.png in Resources */,
+				99FD8AB51B4569AA0082331C /* PageList@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -58,6 +58,17 @@
 @property (nonatomic, weak, readwrite) id <PDFKPageScrubberDelegate> scrubberDelegate;
 
 /**
+ The scrubber's page number label – use for styling.
+ */
+@property (nonatomic, strong) UILabel *pageNumberLabel;
+
+/**
+ the background color of the thumb
+ defaults to [UIColor colorWithWhite:0.8 ...]
+ */
+@property (nonatomic, strong) UIColor *thumbBackgroundColor;
+
+/**
  Initalize the scrubber with the given frame and document.
  
  @param frame  The frame of the scrubber.
@@ -98,6 +109,6 @@
  
  @return A new thumb view.
  */
-- (id)initWithFrame:(CGRect)frame small:(BOOL)small;
+- (id)initWithFrame:(CGRect)frame small:(BOOL)small andColor:(UIColor *)color;
 
 @end

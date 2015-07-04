@@ -25,7 +25,7 @@ internal class PDFKThumbView: UIView {
     //------------------------------------------
     
     //The image view used to display the rendered pdf.
-    private var imageView: UIImageView
+    internal var imageView: UIImageView
     
     /**
     The operation associated with the view.
@@ -114,4 +114,5 @@ internal class PDFKThumbView: UIView {
         }
         super.removeFromSuperview()
     }
+    
 }

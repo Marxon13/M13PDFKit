@@ -34,6 +34,9 @@
 		EA654AB01B41AC42003C01EF /* PDFKThumbQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA654AAF1B41AC42003C01EF /* PDFKThumbQueue.swift */; };
 		EA654AB21B41CAD8003C01EF /* PDFKThumbCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA654AB11B41CAD8003C01EF /* PDFKThumbCache.swift */; };
 		EA654AB41B41DEFE003C01EF /* PDFKThumbFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA654AB31B41DEFE003C01EF /* PDFKThumbFetcher.swift */; };
+		EA654AC31B435CC4003C01EF /* PDFKPageScrubberThumb.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA654AC21B435CC4003C01EF /* PDFKPageScrubberThumb.swift */; };
+		EA654AC51B436040003C01EF /* PDFKPageScrubberTrackControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA654AC41B436040003C01EF /* PDFKPageScrubberTrackControl.swift */; };
+		EA654AC71B4369CB003C01EF /* PDFKPageScrubber.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA654AC61B4369CB003C01EF /* PDFKPageScrubber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +110,9 @@
 		EA654AAF1B41AC42003C01EF /* PDFKThumbQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFKThumbQueue.swift; sourceTree = "<group>"; };
 		EA654AB11B41CAD8003C01EF /* PDFKThumbCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFKThumbCache.swift; sourceTree = "<group>"; };
 		EA654AB31B41DEFE003C01EF /* PDFKThumbFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFKThumbFetcher.swift; sourceTree = "<group>"; };
+		EA654AC21B435CC4003C01EF /* PDFKPageScrubberThumb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFKPageScrubberThumb.swift; sourceTree = "<group>"; };
+		EA654AC41B436040003C01EF /* PDFKPageScrubberTrackControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFKPageScrubberTrackControl.swift; sourceTree = "<group>"; };
+		EA654AC61B4369CB003C01EF /* PDFKPageScrubber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFKPageScrubber.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +288,9 @@
 				CAF2567B1A1CFF2C00F0EA4F /* PDFKPageContentView.m */,
 				CAF2567C1A1CFF2C00F0EA4F /* PDFKPageScrubber.h */,
 				CAF2567D1A1CFF2C00F0EA4F /* PDFKPageScrubber.m */,
+				EA654AC21B435CC4003C01EF /* PDFKPageScrubberThumb.swift */,
+				EA654AC41B436040003C01EF /* PDFKPageScrubberTrackControl.swift */,
+				EA654AC61B4369CB003C01EF /* PDFKPageScrubber.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -424,8 +433,10 @@
 				EA2F477E1B3DDD9200BA50E4 /* PDFKDocument.swift in Sources */,
 				CA86CE931A1EB311009CDD7C /* SamplesTableViewController.m in Sources */,
 				EA654AB41B41DEFE003C01EF /* PDFKThumbFetcher.swift in Sources */,
+				EA654AC71B4369CB003C01EF /* PDFKPageScrubber.swift in Sources */,
 				EA654AAA1B419D7A003C01EF /* PDFKThumbView.swift in Sources */,
 				CAF256891A1CFF2C00F0EA4F /* PDFKPageContent.m in Sources */,
+				EA654AC31B435CC4003C01EF /* PDFKPageScrubberThumb.swift in Sources */,
 				CAF2563B1A1CFF0000F0EA4F /* AppDelegate.m in Sources */,
 				CAF256871A1CFF2C00F0EA4F /* PDFKBasicPDFViewerSinglePageCollectionView.m in Sources */,
 				EA654AB21B41CAD8003C01EF /* PDFKThumbCache.swift in Sources */,
@@ -437,6 +448,7 @@
 				EA654AAE1B41ABEE003C01EF /* PDFKThumbRenderer.swift in Sources */,
 				537D2E3A1AD279D0002849D2 /* PDFKBasicPDFViewer.swift in Sources */,
 				EA2F477C1B3DD6F200BA50E4 /* CGPDFDocument.swift in Sources */,
+				EA654AC51B436040003C01EF /* PDFKPageScrubberTrackControl.swift in Sources */,
 				CAF256881A1CFF2C00F0EA4F /* PDFKBasicPDFViewerThumbsCollectionView.m in Sources */,
 				CAF256381A1CFF0000F0EA4F /* main.m in Sources */,
 			);

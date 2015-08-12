@@ -14,6 +14,7 @@
 */
 
 #import <UIKit/UIKit.h>
+#import "PDFKDocument.h"
 @class PDFKDocument;
 
 typedef void (^PDFKBasicPDFViewerPageChangeBlock)(NSUInteger page);
@@ -80,6 +81,13 @@ typedef void (^PDFKBasicPDFViewerPageChangeBlock)(NSUInteger page);
  If false, a done button is added to the toolbar.
  */
 @property (nonatomic, assign) BOOL standalone;
-
+/**
+ If false, a second toolbar row will be shown
+ */
+@property (nonatomic, assign) BOOL useNavigationBar;
+/**
+ If false, a second toolbar row will be shown
+ */
+@property (nonatomic, assign) BOOL separatePrintButon;
 
 @end

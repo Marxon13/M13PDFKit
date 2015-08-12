@@ -142,17 +142,19 @@
     
     //Create the navigation bar.
     _navigationToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44.0)];
-    _navigationToolbar.delegate = self;
-    //Set this to no, cant have autoresizing masks and layout constraints at the same time.
-    _navigationToolbar.translatesAutoresizingMaskIntoConstraints = NO;
-    //Add to the view
-    [self.view addSubview:_navigationToolbar];
-    //Create the constraints.
-    NSMutableArray *navigationToolbarConstraints = [[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[toolbar]|" options:NSLayoutFormatAlignAllBaseline metrics:nil views:@{@"superview": self.view, @"toolbar": _navigationToolbar}] mutableCopy];
-    [navigationToolbarConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayout]-0-[toolbar(44)]" options:NSLayoutFormatAlignAllLeft metrics:nil views:@{@"toolbar": _navigationToolbar, @"topLayout": self.topLayoutGuide}]];
-    [self.view addConstraints:navigationToolbarConstraints];
-    //Finish setup
-    [_navigationToolbar sizeToFit];
+    if (!self.useNavigationBar) {
+        _navigationToolbar.delegate = self;
+        //Set this to no, cant have autoresizing masks and layout constraints at the same time.
+        _navigationToolbar.translatesAutoresizingMaskIntoConstraints = NO;
+        //Add to the view
+        [self.view addSubview:_navigationToolbar];
+        //Create the constraints.
+        NSMutableArray *navigationToolbarConstraints = [[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[toolbar]|" options:NSLayoutFormatAlignAllBaseline metrics:nil views:@{@"superview": self.view, @"toolbar": _navigationToolbar}] mutableCopy];
+        [navigationToolbarConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayout]-0-[toolbar(44)]" options:NSLayoutFormatAlignAllLeft metrics:nil views:@{@"toolbar": _navigationToolbar, @"topLayout": self.topLayoutGuide}]];
+        [self.view addConstraints:navigationToolbarConstraints];
+        //Finish setup
+        [_navigationToolbar sizeToFit];
+    }
     [self resetNavigationToolbar];
     
     //Create the scrubber
@@ -205,12 +207,26 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if ([self navigationController]) {
+        [[self navigationController] setToolbarHidden:YES animated:animated];
+    }
+    if ([self tabBarController]) {
+        [[[self tabBarController] tabBar] setHidden:YES];
+    }
+}
+
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
     
     //Save the document
     [_document saveReaderDocument];
+    if ([self navigationItem]) {
+        [[self navigationItem] setRightBarButtonItems:nil animated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -263,6 +279,8 @@
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
     [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+    [_pageScrubber setNeedsUpdateConstraints];
+    [_pageScrubber setNeedsLayout];
 }
 
 #pragma mark - Navigation Bar
@@ -271,51 +289,92 @@
 {
     NSMutableArray *buttonsArray = [NSMutableArray array];
     
+    UIBarButtonItem* flexSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem* fixedSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    fixedSpace.width = 10.0;
+    UIBarButtonItem* doneBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismiss)];
+    UIBarButtonItem *listItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Thumbs"] landscapeImagePhone:[UIImage imageNamed:@"Thumbs"] style:UIBarButtonItemStylePlain target:self action:@selector(list)];
+    _shareItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(send)];
+    UIBarButtonItem* printButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Print"] landscapeImagePhone:[UIImage imageNamed:@"Print"] style:UIBarButtonItemStylePlain target:self action:@selector(print)];
+    if (![_document.bookmarks containsIndex:_document.currentPage]) {
+        _bookmarkItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Bookmark"] style:UIBarButtonItemStylePlain target:self action:@selector(bookmark)];
+    } else {
+        _bookmarkItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Bookmarked"] style:UIBarButtonItemStylePlain target:self action:@selector(bookmark)];
+    }
+    
+    if (_useNavigationBar && [self navigationItem]) {
+        if (_showingSinglePage) {
+            if (!_standalone) {
+                self.navigationItem.leftBarButtonItem = self.navigationItem.backBarButtonItem;
+            } else {
+                self.navigationItem.leftBarButtonItem = doneBtn;
+            }
+            NSMutableArray* buttonsArray = [[NSMutableArray alloc] init];
+            
+            if (_enableBookmarks) {
+                //Add bookmarks
+                //Change image based on wether or not the page is bookmarked
+                [buttonsArray addObject:_bookmarkItem];
+            }
+            
+            [buttonsArray addObject: listItem];
+            
+            if  (_enablePrinting && _separatePrintButon) {
+                [buttonsArray addObject:printButton];
+            }
+            
+            if (_enableSharing || _enableOpening || (_enablePrinting && !_separatePrintButon)) {
+                [buttonsArray addObject:_shareItem];
+            }
+            
+            [[self navigationItem] setRightBarButtonItems:buttonsArray animated:false];
+        } else {
+            [self navigationItem].leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Resume" style:UIBarButtonItemStylePlain target:self action:@selector(list)];
+            //Bookmarks
+            UISegmentedControl *control = [[UISegmentedControl alloc] initWithItems:@[[UIImage imageNamed:@"Thumbs"], [UIImage imageNamed:@"Bookmark"]]];
+            [control setSelectedSegmentIndex:(!_showingBookmarks ? 0 : 1)];
+            [control sizeToFit];
+            [control addTarget:self action:@selector(toggleShowBookmarks:) forControlEvents:UIControlEventValueChanged];
+            UIBarButtonItem *bookmarkItem = [[UIBarButtonItem alloc] initWithCustomView:control];
+            [buttonsArray addObject:bookmarkItem];
+            
+            [[self navigationItem] setRightBarButtonItems:buttonsArray animated:false];
+        }
+        return;
+    }
+    
     //Set controls for a single page.
     if (_showingSinglePage) {
         //Done Button
         if (!_standalone) {
-            [buttonsArray addObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismiss)]];
-            [buttonsArray addObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil]];
+            [buttonsArray addObject: doneBtn];
+            [buttonsArray addObject:flexSpace];
         }
         
         //Add space if necessary
         if (buttonsArray.count > 0) {
-            UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-            space.width = 10.0;
-            [buttonsArray addObject:space];
+            [buttonsArray addObject:fixedSpace];
         }
         
         //Add list
-        UIBarButtonItem *listItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Thumbs"] landscapeImagePhone:[UIImage imageNamed:@"Thumbs"] style:UIBarButtonItemStylePlain target:self action:@selector(list)];
+        
         [buttonsArray addObject:listItem];
         
         //Sharing Button
         if (_enableSharing || _enablePrinting || _enableOpening) {
-            UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-            space.width = 10.0;
-            [buttonsArray addObject:space];
-            _shareItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(send)];
+            [buttonsArray addObject:fixedSpace];
             [buttonsArray addObject:_shareItem];
         }
         
         //Flexible space
-        [buttonsArray addObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil]];
+        [buttonsArray addObject: flexSpace];
         
         //Bookmark Button
         if (_enableBookmarks) {
             //Add space
-            UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-            space.width = 10.0;
-            [buttonsArray addObject:space];
+            [buttonsArray addObject: fixedSpace];
             //Add bookmarks
             //Change image based on wether or not the page is bookmarked
-            if (![_document.bookmarks containsIndex:_document.currentPage]) {
-                _bookmarkItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Bookmark"] style:UIBarButtonItemStylePlain target:self action:@selector(bookmark)];
-            } else {
-                _bookmarkItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Bookmarked"] style:UIBarButtonItemStylePlain target:self action:@selector(bookmark)];
-            }
-            
             [buttonsArray addObject:_bookmarkItem];
         }
     } else {
@@ -323,15 +382,13 @@
         //Set controls for thumbs
         //Done Button
         if (!_standalone) {
-            [buttonsArray addObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismiss)]];
-            [buttonsArray addObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil]];
+            [buttonsArray addObject: doneBtn];
+            [buttonsArray addObject: flexSpace];
         }
         
         //Add space if necessary
         if (buttonsArray.count > 0) {
-            UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-            space.width = 10.0;
-            [buttonsArray addObject:space];
+            [buttonsArray addObject: fixedSpace];
         }
         
         //Go back
@@ -339,7 +396,7 @@
         [buttonsArray addObject:listItem];
         
         //Flexible space
-        [buttonsArray addObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil]];
+        [buttonsArray addObject: flexSpace];
         
         //Bookmarks
         UISegmentedControl *control = [[UISegmentedControl alloc] initWithItems:@[[UIImage imageNamed:@"Thumbs"], [UIImage imageNamed:@"Bookmark"]]];
@@ -419,6 +476,26 @@
 - (void)list
 {
     [self toggleSinglePageView];
+}
+
+- (void)print
+{
+    if ([UIPrintInteractionController canPrintURL:_document.fileURL]) {
+        UIPrintInteractionController *
+        controller = [UIPrintInteractionController
+                      sharedPrintController];
+        
+        controller.printingItem = _document.fileURL;
+        
+        UIPrintInfo *printInfo = [UIPrintInfo printInfo];
+        printInfo.outputType = UIPrintInfoOutputGeneral;
+        printInfo.jobName = [_document.fileURL lastPathComponent];
+        controller.printInfo = printInfo;
+        
+        controller.showsPageRange = YES;
+        
+        [controller presentAnimated:YES completionHandler:nil];
+    }
 }
 
 - (void)toggleShowBookmarks:(id)sender
@@ -552,8 +629,10 @@
 - (void)toggleToolbars
 {
     if (_showingSinglePage ) {
-        if (_navigationToolbar.hidden) {
+        if (_pageScrubber.hidden) {
             //Show toolbars
+            [self.navigationController setNavigationBarHidden:NO animated:YES];
+            [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
             _navigationToolbar.hidden = NO;
             _pageScrubber.hidden = NO;
             [UIView animateWithDuration:0.3 animations:^{
@@ -566,6 +645,8 @@
             }];
         } else {
             //Hide toolbars
+            [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+            [self.navigationController setNavigationBarHidden:YES animated:YES];
             [UIView animateWithDuration:0.3 animations:^{
                 if (_navigationToolbar.alpha == 1.0) {
                     _navigationToolbar.alpha = 0.0;

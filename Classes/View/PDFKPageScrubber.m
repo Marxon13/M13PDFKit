@@ -65,6 +65,8 @@
     NSTimer *trackTimer;
 }
 
+@synthesize pageNumberLabel = pageNumberLabel;
+
 - (id)initWithFrame:(CGRect)frame
 {
 	return [self initWithFrame:frame document:nil];
@@ -144,6 +146,12 @@
 	return self;
 }
 
+- (UIColor *)thumbBackgroundColor {
+    if (!_thumbBackgroundColor) {
+        return [UIColor colorWithWhite:0.8 alpha:1];
+    }
+    return _thumbBackgroundColor;
+}
 
 - (void)removeFromSuperview
 {
@@ -241,7 +249,7 @@
 		CGRect thumbRect = CGRectMake(thumbX, thumbY, THUMB_LARGE_WIDTH, THUMB_LARGE_HEIGHT);
         
         //Create the thumb view
-		pageThumbView = [[PDFKPageScrubberThumb alloc] initWithFrame:thumbRect];
+		pageThumbView = [[PDFKPageScrubberThumb alloc] initWithFrame:thumbRect small:NO andColor:self.thumbBackgroundColor];
         //Z position so that it sits on top of the small thumbs
 		pageThumbView.layer.zPosition = 1.0f;
         //Add as the first subview of the track control
@@ -289,7 +297,7 @@
             NSString *phrase = document.password;
             
             //Create a small thumb view
-			smallThumbView = [[PDFKPageScrubberThumb alloc] initWithFrame:thumbRect small:YES];
+			smallThumbView = [[PDFKPageScrubberThumb alloc] initWithFrame:thumbRect small:YES andColor:self.thumbBackgroundColor];
 			PDFKThumbRequest *thumbRequest = [PDFKThumbRequest newForView:smallThumbView fileURL:fileURL password:phrase guid:guid page:page size:size];
             
             //Request the thumb
@@ -525,16 +533,15 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-	return [self initWithFrame:frame small:NO];
+    return [self initWithFrame:frame small:NO andColor:[UIColor colorWithWhite:0.8 alpha:0]];
 }
 
-- (id)initWithFrame:(CGRect)frame small:(BOOL)small
+- (id)initWithFrame:(CGRect)frame small:(BOOL)small andColor:(UIColor *)color
 {
 	if ((self = [super initWithFrame:frame]))
 	{
 		CGFloat value = (small ? 0.6f : 0.7f); // Size based alpha value
-        
-		UIColor *background = [UIColor colorWithWhite:0.8f alpha:value];
+		UIColor *background = [color colorWithAlphaComponent:value];
         
 		self.backgroundColor = background;
         imageView.backgroundColor = background;

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "M13PDFKit"
-  s.version      = "1.0.3"
+  s.version      = "1.1.0"
   s.summary      = "M13PDFKit is an iBooks like PDF viewer that can be embedded in iOS applications."
 
   s.description  = <<-DESC
@@ -27,11 +27,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
   s.platform     = :ios, '8.0'
 
-  s.source = { :git => "https://github.com/Marxon13/M13PDFKit.git", :tag => "v1.0.3"}
+  s.source = { :git => "https://github.com/Marxon13/M13PDFKit.git", :tag => "v1.1.0"}
 
   s.source_files  = 'Classes/**/*.{h,m}'	
   
-  s.ios.resource_bundle         = { 'M13PDFKitResources' => 'Resources/*' }
+  s.ios.resource_bundle         = { 'M13PDFKitResources' => 'Resources/*.png' }
 
   s.frameworks = 'Foundation', 'CoreGraphics', 'ImageIO', 'UIKit'
 

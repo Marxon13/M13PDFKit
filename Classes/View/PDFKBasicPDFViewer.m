@@ -407,27 +407,40 @@
 
 - (void)thumbCollectionView:(PDFKBasicPDFViewerThumbsCollectionView *)thumbsCollectionView didSelectPage:(NSUInteger)page
 {
-    [self.pageCollectionView displayPage:page animated:YES];
-    self.document.currentPage = page;
-    [self.pageScrubber updateScrubber];
+    if (self.document.currentPage != page) {
+        [self.pageCollectionView displayPage:page animated:YES];
+        self.document.currentPage = page;
+        [self.pageScrubber updateScrubber];
+        if (_pageChangeBlock) {
+            _pageChangeBlock(page);
+        }
+    }
     [self toggleSinglePageView];
 }
 
 - (void)scrubber:(PDFKPageScrubber *)pageScrubber selectedPage:(NSInteger)page
 {
-    self.document.currentPage = page;
-    [self.pageCollectionView displayPage:page animated:NO];
-    [self resetNavigationToolbar];
+    if (self.document.currentPage != page) {
+        self.document.currentPage = page;
+        [self.pageCollectionView displayPage:page animated:NO];
+        [self resetNavigationToolbar];
+        
+        if (_pageChangeBlock) {
+            _pageChangeBlock(page);
+        }
+    }
 }
 
 - (void)singlePageCollectionView:(PDFKBasicPDFViewerSinglePageCollectionView *)collectionView didDisplayPage:(NSUInteger)page
 {
-    self.document.currentPage = page;
-    [self.pageScrubber updateScrubber];
-    [self resetNavigationToolbar];
-    
-    if (_pageChangeBlock) {
-        _pageChangeBlock(page);
+    if (self.document.currentPage != page) {
+        self.document.currentPage = page;
+        [self.pageScrubber updateScrubber];
+        [self resetNavigationToolbar];
+        
+        if (_pageChangeBlock) {
+            _pageChangeBlock(page);
+        }
     }
 }
 

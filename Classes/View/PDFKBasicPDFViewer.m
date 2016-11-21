@@ -26,7 +26,6 @@
 
 @property (nonatomic, retain, readwrite) UIToolbar *navigationToolbar;
 @property (nonatomic, retain, readwrite) UIToolbar *thumbnailSlider;
-@property (nonatomic, strong, readwrite) UIPopoverController *activityPopoverController;
 @property (nonatomic, strong, readwrite) UIBarButtonItem *shareItem;
 @property (nonatomic, strong, readwrite) UIBarButtonItem *bookmarkItem;
 @property (nonatomic, strong, readwrite) PDFKPageScrubber *pageScrubber;
@@ -365,13 +364,15 @@
         [self presentViewController:activityViewController animated:YES completion:NULL];
     } else {
         // Create pop up
-        self.activityPopoverController = [[UIPopoverController alloc] initWithContentViewController:activityViewController];
+        activityViewController.modalPresentationStyle = UIModalPresentationPopover;
         // Store reference to superview (UIPopoverController) to allow dismissal
         if (openInAppActivity) {
-            openInAppActivity.superViewController = self.activityPopoverController;
+            openInAppActivity.superViewController = activityViewController;
         }
         // Show UIActivityViewController in popup
-        [self.activityPopoverController presentPopoverFromBarButtonItem:_shareItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        activityViewController.popoverPresentationController.sourceView = (UIView*)_shareItem;
+        
+        [self presentViewController:activityViewController animated:YES completion:nil];
     }
 }
 

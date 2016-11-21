@@ -93,10 +93,6 @@ typedef void (^PDFKBasicPDFViewerPageChangeBlock)(NSUInteger page);
  */
 @property (nonatomic, retain, readonly) UIToolbar *thumbnailSlider;
 /**
- The popover controller to share the document on the iPad.
- */
-@property (nonatomic, strong, readonly) UIPopoverController *activityPopoverController;
-/**
  The share button.
  */
 @property (nonatomic, strong, readonly) UIBarButtonItem *shareItem;

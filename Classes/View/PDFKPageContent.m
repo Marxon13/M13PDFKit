@@ -330,7 +330,8 @@
                         //Destination URI string
 						const char *uri = (const char *)CGPDFStringGetBytePtr(uriString);
                         NSString *target = [NSString stringWithCString:uri encoding:NSUTF8StringEncoding];
-                        linkTarget = [NSURL URLWithString:[target stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+                        
+                        linkTarget = [NSURL URLWithString:[target stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]]];
                         //Debug check
                         #if DEBUG
 						if (linkTarget == nil) NSLog(@"%s Bad URI '%@'", __FUNCTION__, target);

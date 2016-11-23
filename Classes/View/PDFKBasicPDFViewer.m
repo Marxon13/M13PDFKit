@@ -254,12 +254,15 @@
             [buttonsArray addObject:space];
         }
         
-        //Add list
-        UIBarButtonItem *listItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Thumbs" inBundle:[PDFKBasicPDFViewer getResourcesBundle] compatibleWithTraitCollection:nil] landscapeImagePhone:[UIImage imageNamed:@"Thumbs" inBundle:[PDFKBasicPDFViewer getResourcesBundle] compatibleWithTraitCollection:nil] style:UIBarButtonItemStylePlain target:self action:@selector(list)];
-        [buttonsArray addObject:listItem];
-        
-        //Flexible space
-        [buttonsArray addObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil]];
+        if(_enableThumbs == YES)
+        {
+            //Add list
+            UIBarButtonItem *listItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Thumbs" inBundle:[PDFKBasicPDFViewer getResourcesBundle] compatibleWithTraitCollection:nil] landscapeImagePhone:[UIImage imageNamed:@"Thumbs" inBundle:[PDFKBasicPDFViewer getResourcesBundle] compatibleWithTraitCollection:nil] style:UIBarButtonItemStylePlain target:self action:@selector(list)];
+            [buttonsArray addObject:listItem];
+            
+            //Flexible space
+            [buttonsArray addObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil]];
+        }
         
         //Bookmark Button
         if (_enableBookmarks) {

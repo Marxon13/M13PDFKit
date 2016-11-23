@@ -58,6 +58,10 @@ typedef void (^PDFKBasicPDFViewerPageChangeBlock)(NSUInteger page);
 
 /**@name Features*/
 /**
+ Wether or not to allow showing the thumbs button.
+ */
+@property (nonatomic, assign) BOOL enableThumbs;
+/**
  Wether or not to allow bookmarking of pages.
  */
 @property (nonatomic, assign) BOOL enableBookmarks;

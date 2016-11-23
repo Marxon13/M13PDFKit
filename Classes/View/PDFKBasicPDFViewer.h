@@ -48,6 +48,8 @@ typedef void (^PDFKBasicPDFViewerPageChangeBlock)(NSUInteger page);
  */
 - (void)displayPage:(NSUInteger)page;
 
++ (NSBundle*)getResourcesBundle;
+
 /**@name Properties*/
 
 @property (nonatomic, strong) PDFKBasicPDFViewerPageChangeBlock pageChangeBlock;

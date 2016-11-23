@@ -19,6 +19,7 @@
 #import "PDFKThumbView.h"
 #import "PDFKThumbRequest.h"
 #import "PDFKThumbCache.h"
+#import "PDFKBasicPDFViewer.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface PDFKBasicPDFViewerThumbsCollectionView () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
@@ -228,7 +229,7 @@
     if (!show) {
         _bookmarkView.image = nil;
     } else {
-        _bookmarkView.image = [[UIImage imageNamed:@"Bookmarked" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        _bookmarkView.image = [[UIImage imageNamed:@"Bookmarked" inBundle:[PDFKBasicPDFViewer getResourcesBundle] compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     }
 }
 

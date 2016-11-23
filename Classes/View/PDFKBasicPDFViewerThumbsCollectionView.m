@@ -228,7 +228,7 @@
     if (!show) {
         _bookmarkView.image = nil;
     } else {
-        _bookmarkView.image = [[UIImage imageNamed:@"Bookmarked"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        _bookmarkView.image = [[UIImage imageNamed:@"Bookmarked" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     }
 }
 

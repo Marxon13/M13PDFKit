@@ -544,7 +544,7 @@
 
 - (void)dealloc
 {
-    CGPDFPageRelease(_PDFPageRef),;
+    CGPDFPageRelease(_PDFPageRef);
     _PDFPageRef = NULL;
     CGPDFDocumentRelease(_PDFDocRef);
     _PDFDocRef = NULL;

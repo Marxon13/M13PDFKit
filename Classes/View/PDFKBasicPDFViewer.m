@@ -495,6 +495,20 @@
 
 - (void)handleSingleTap:(UITapGestureRecognizer *)gestureRecognizer
 {
+   //Ability to detect link on pdfs
+    PDFKBasicPDFViewerSinglePageCollectionViewCell* cell = (PDFKBasicPDFViewerSinglePageCollectionViewCell*)self.pageCollectionView.visibleCells[0];
+    id link = [cell.pageContentView processSingleTap:gestureRecognizer];
+    if ([link isKindOfClass:[NSURL class]] && [[UIApplication sharedApplication]  canOpenURL:link]){
+        [[UIApplication sharedApplication] openURL:link];
+        return;
+    } else if ([link isKindOfClass:[NSString class]]) {
+        NSURL* url = [NSURL URLWithString:link];
+        if (url != nil && [[UIApplication sharedApplication]  canOpenURL:url]){
+            [[UIApplication sharedApplication] openURL:url];
+            return;
+        }
+    }
+ 
     //Check to see if the document was clicked.
     if (gestureRecognizer.state == UIGestureRecognizerStateRecognized && _showingSinglePage) {
         if (gestureRecognizer.numberOfTapsRequired == 1) {

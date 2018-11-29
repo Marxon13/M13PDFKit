@@ -26,7 +26,6 @@
 
 @property (nonatomic, retain, readwrite) UIToolbar *navigationToolbar;
 @property (nonatomic, retain, readwrite) UIToolbar *thumbnailSlider;
-@property (nonatomic, strong, readwrite) UIPopoverController *activityPopoverController;
 @property (nonatomic, strong, readwrite) UIBarButtonItem *shareItem;
 @property (nonatomic, strong, readwrite) UIBarButtonItem *bookmarkItem;
 @property (nonatomic, strong, readwrite) PDFKPageScrubber *pageScrubber;
@@ -255,12 +254,15 @@
             [buttonsArray addObject:space];
         }
         
-        //Add list
-        UIBarButtonItem *listItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Thumbs"] landscapeImagePhone:[UIImage imageNamed:@"Thumbs"] style:UIBarButtonItemStylePlain target:self action:@selector(list)];
-        [buttonsArray addObject:listItem];
-        
-        //Flexible space
-        [buttonsArray addObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil]];
+        if(_enableThumbs == YES)
+        {
+            //Add list
+            UIBarButtonItem *listItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Thumbs" inBundle:[PDFKBasicPDFViewer getResourcesBundle] compatibleWithTraitCollection:nil] landscapeImagePhone:[UIImage imageNamed:@"Thumbs" inBundle:[PDFKBasicPDFViewer getResourcesBundle] compatibleWithTraitCollection:nil] style:UIBarButtonItemStylePlain target:self action:@selector(list)];
+            [buttonsArray addObject:listItem];
+            
+            //Flexible space
+            [buttonsArray addObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil]];
+        }
         
         //Bookmark Button
         if (_enableBookmarks) {
@@ -271,9 +273,9 @@
             //Add bookmarks
             //Change image based on wether or not the page is bookmarked
             if (![_document.bookmarks containsIndex:_document.currentPage]) {
-                _bookmarkItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Bookmark"] style:UIBarButtonItemStylePlain target:self action:@selector(bookmark)];
+                _bookmarkItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Bookmark" inBundle:[PDFKBasicPDFViewer getResourcesBundle] compatibleWithTraitCollection:nil] style:UIBarButtonItemStylePlain target:self action:@selector(bookmark)];
             } else {
-                _bookmarkItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Bookmarked"] style:UIBarButtonItemStylePlain target:self action:@selector(bookmark)];
+                _bookmarkItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Bookmarked" inBundle:[PDFKBasicPDFViewer getResourcesBundle] compatibleWithTraitCollection:nil] style:UIBarButtonItemStylePlain target:self action:@selector(bookmark)];
             }
             
             [buttonsArray addObject:_bookmarkItem];
@@ -314,7 +316,12 @@
         [buttonsArray addObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil]];
         
         //Bookmarks
-        UISegmentedControl *control = [[UISegmentedControl alloc] initWithItems:@[[UIImage imageNamed:@"Thumbs"], [UIImage imageNamed:@"Bookmark"]]];
+        
+        
+        UIImage *thumbsImage = [UIImage imageNamed:@"Thumbs" inBundle:[PDFKBasicPDFViewer getResourcesBundle] compatibleWithTraitCollection:nil];
+        UIImage *bookmarkImage = [UIImage imageNamed:@"Bookmark" inBundle:[PDFKBasicPDFViewer getResourcesBundle] compatibleWithTraitCollection:nil];
+        
+        UISegmentedControl *control = [[UISegmentedControl alloc] initWithItems:@[thumbsImage, bookmarkImage]];
         [control setSelectedSegmentIndex:(!_showingBookmarks ? 0 : 1)];
         [control sizeToFit];
         [control addTarget:self action:@selector(toggleShowBookmarks:) forControlEvents:UIControlEventValueChanged];
@@ -357,21 +364,15 @@
     }
     
     if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
-        // Store reference to superview (UIActionSheet) to allow dismissal
-        if (openInAppActivity) {
-            openInAppActivity.superViewController = activityViewController;
-        }
         // Show UIActivityViewController
         [self presentViewController:activityViewController animated:YES completion:NULL];
     } else {
         // Create pop up
-        self.activityPopoverController = [[UIPopoverController alloc] initWithContentViewController:activityViewController];
-        // Store reference to superview (UIPopoverController) to allow dismissal
-        if (openInAppActivity) {
-            openInAppActivity.superViewController = self.activityPopoverController;
-        }
+        activityViewController.modalPresentationStyle = UIModalPresentationPopover;
         // Show UIActivityViewController in popup
-        [self.activityPopoverController presentPopoverFromBarButtonItem:_shareItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        activityViewController.popoverPresentationController.sourceView = (UIView*)_shareItem;
+        
+        [self presentViewController:activityViewController animated:YES completion:nil];
     }
 }
 
@@ -611,6 +612,17 @@
             _thumbsCollectionView.hidden = YES;
         }];
     }
+}
+
+#pragma mark - Static methods
+
++ (NSBundle*)getResourcesBundle
+{
+    NSBundle *frameworkBundle = [NSBundle bundleForClass:[self class]];
+    NSURL *frameworkResourcesBundleUrl = [frameworkBundle URLForResource:@"M13PDFKitResources" withExtension:@"bundle"];
+    NSBundle *frameworkResourcesBundle = [NSBundle bundleWithURL:frameworkResourcesBundleUrl];
+    
+    return frameworkResourcesBundle;
 }
 
 @end

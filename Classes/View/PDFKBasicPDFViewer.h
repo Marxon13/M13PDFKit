@@ -48,6 +48,8 @@ typedef void (^PDFKBasicPDFViewerPageChangeBlock)(NSUInteger page);
  */
 - (void)displayPage:(NSUInteger)page;
 
++ (NSBundle*)getResourcesBundle;
+
 /**@name Properties*/
 
 @property (nonatomic, strong) PDFKBasicPDFViewerPageChangeBlock pageChangeBlock;
@@ -55,6 +57,10 @@ typedef void (^PDFKBasicPDFViewerPageChangeBlock)(NSUInteger page);
 @property (nonatomic, strong, readonly) PDFKDocument *document;
 
 /**@name Features*/
+/**
+ Wether or not to allow showing the thumbs button.
+ */
+@property (nonatomic, assign) BOOL enableThumbs;
 /**
  Wether or not to allow bookmarking of pages.
  */
@@ -92,10 +98,6 @@ typedef void (^PDFKBasicPDFViewerPageChangeBlock)(NSUInteger page);
  The slider at the bottom of the screen to show the thumbnails.
  */
 @property (nonatomic, retain, readonly) UIToolbar *thumbnailSlider;
-/**
- The popover controller to share the document on the iPad.
- */
-@property (nonatomic, strong, readonly) UIPopoverController *activityPopoverController;
 /**
  The share button.
  */

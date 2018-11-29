@@ -59,7 +59,8 @@ CGPDFDocumentRef CGPDFDocumentCreate(NSURL *url, NSString *password)
 				}
                 //Failed to unlock the document. Cleanup.
 				if (CGPDFDocumentIsUnlocked(docRef) == FALSE) {
-					CGPDFDocumentRelease(docRef), docRef = NULL;
+                    CGPDFDocumentRelease(docRef);
+                    docRef = NULL;
 				}
 			}
 		} else {

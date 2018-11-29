@@ -279,7 +279,6 @@ static inline CGFloat ZoomScaleThatFits(CGSize target, CGSize source)
     //On the third page, the bounds size get set to 0 by autolayout for all pages that are created next.
     //No idea why...
     //EXPLAIN!!! EXPLAIN!!! EXPLAIN!!! Explain yourself doctor...
-#warning EXPLAIN!!!
     if (bounds.size.width != 0 && bounds.size.height != 0) {
         [super setBounds: bounds];
     }

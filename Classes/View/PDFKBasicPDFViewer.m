@@ -364,19 +364,11 @@
     }
     
     if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone){
-        // Store reference to superview (UIActionSheet) to allow dismissal
-        if (openInAppActivity) {
-            openInAppActivity.superViewController = activityViewController;
-        }
         // Show UIActivityViewController
         [self presentViewController:activityViewController animated:YES completion:NULL];
     } else {
         // Create pop up
         activityViewController.modalPresentationStyle = UIModalPresentationPopover;
-        // Store reference to superview (UIPopoverController) to allow dismissal
-        if (openInAppActivity) {
-            openInAppActivity.superViewController = activityViewController;
-        }
         // Show UIActivityViewController in popup
         activityViewController.popoverPresentationController.sourceView = (UIView*)_shareItem;
         
